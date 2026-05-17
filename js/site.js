@@ -7,6 +7,7 @@ const ASSET_PATHS = {
   projectPortals: "images/game/project-portals.png",
   ui: "images/game/ui.png"
 };
+const ENABLE_GENERATED_ASSETS = false;
 
 const emailHref = "mailto:kjrlabs9@gmail.com?subject=Project%20brief%20for%20KJR%20Labs&body=Hi%20KJR%20Labs%2C%0A%0AI%20want%20to%20build%3A%0A%0AWho%20it%20is%20for%3A%0A%0AWhat%20should%20happen%20first%3A%0A%0ATimeline%20or%20budget%20range%3A%0A%0ALinks%20or%20references%3A%0A";
 
@@ -219,9 +220,11 @@ scene.add(player);
 
 const interactionObjects = new Map();
 const assetTextures = {};
-void loadGameAssets().then((textures) => {
-  Object.assign(assetTextures, textures);
-});
+if (ENABLE_GENERATED_ASSETS) {
+  void loadGameAssets().then((textures) => {
+    Object.assign(assetTextures, textures);
+  });
+}
 
 showLoadingProgress();
 buildWorld(assetTextures);
