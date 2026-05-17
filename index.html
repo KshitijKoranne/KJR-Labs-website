@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KJR Labs | Play Through a Software Studio</title>
-  <meta name="description" content="Explore KJR Labs as a playable open-world software studio: websites, Chrome extensions, custom software, apps, automation systems, and project showcases.">
+  <title>KJR Labs | Software, Websites & Automation Agency</title>
+  <meta name="description" content="KJR Labs builds business websites, Chrome extensions, custom software, web apps, dashboards, and automation systems for customers who need practical digital products.">
   <meta name="author" content="KJR Labs">
   <link rel="canonical" href="https://kjrlabs.in/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kjrlabs.in/">
-  <meta property="og:title" content="KJR Labs | Play Through a Software Studio">
-  <meta property="og:description" content="A game-like agency website where clients explore services, projects, process, and contact by walking through a playable world.">
+  <meta property="og:title" content="KJR Labs | Software, Websites & Automation Agency">
+  <meta property="og:description" content="Websites, Chrome extensions, custom software, apps, dashboards, and automation built around your business requirement.">
   <meta property="og:image" content="https://kjrlabs.in/images/logo-kjr-labs.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="KJR Labs | Play Through a Software Studio">
-  <meta name="twitter:description" content="Websites, Chrome extensions, custom software, apps, automation systems, and product launches as a playable open-world journey.">
+  <meta name="twitter:title" content="KJR Labs | Software, Websites & Automation Agency">
+  <meta name="twitter:description" content="Tell KJR Labs what you need to build. We shape it, design it, and ship the working product.">
   <meta name="twitter:image" content="https://kjrlabs.in/images/logo-kjr-labs.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
@@ -37,69 +37,184 @@
       "addressRegion": "Gujarat",
       "addressCountry": "IN"
     },
-    "description": "KJR Labs designs and builds websites, Chrome extensions, custom software, web apps, automation systems, and digital products."
+    "description": "KJR Labs designs and builds websites, Chrome extensions, custom software, web apps, dashboards, and automation systems."
   }
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#dialogue">Skip to current dialogue</a>
-  <main class="game-shell" aria-label="Playable KJR Labs software studio world">
-    <canvas id="world" aria-label="Playable KJR Labs open-world agency map"></canvas>
-
-    <section class="loading-screen" data-loading aria-label="Loading KJR Labs world">
-      <div class="loading-card">
-        <img src="images/logo-kjr-labs.png" alt="" width="56" height="56">
-        <p class="eyebrow">KJR Labs</p>
-        <h1>Lighting the idea lantern</h1>
-        <div class="loading-bar" aria-hidden="true"><span data-loading-bar></span></div>
-        <p data-loading-status>Drawing the first road...</p>
-      </div>
-    </section>
-
-    <header class="game-topbar">
-      <a class="brand" href="#start" aria-label="KJR Labs start camp">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="KJR Labs home">
         <img src="images/logo-kjr-labs.png" alt="" width="40" height="40">
         <span>KJR Labs</span>
       </a>
-      <div class="topbar-hint">
-        <span>Desktop</span>
-        <strong>WASD / Arrows</strong>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#fit">Best fit</a>
+        <a class="nav-cta" href="#contact">Contact us</a>
       </div>
-      <div class="topbar-hint mobile-only">
-        <span>Mobile</span>
-        <strong>Tap road to walk</strong>
-      </div>
-    </header>
+    </nav>
+  </header>
 
-    <aside class="hud" aria-label="Game status">
-      <div class="hud-item">
-        <span>Area</span>
-        <strong data-area>Start Camp</strong>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Software agency in Vadodara, working remotely</p>
+          <h1>We build software that fits your business requirement.</h1>
+          <p class="hero-text">KJR Labs helps customers turn rough ideas, manual workflows, and digital needs into clean websites, Chrome extensions, web apps, dashboards, automations, and custom software.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="mailto:kjrlabs9@gmail.com?subject=Project%20brief%20for%20KJR%20Labs&body=Hi%20KJR%20Labs%2C%0A%0AI%20want%20to%20build%3A%0A%0AWho%20will%20use%20it%3A%0A%0AWhat%20should%20it%20do%3A%0A%0ATimeline%20or%20budget%20range%3A%0A%0AReferences%3A%0A">Start a project</a>
+            <a class="button secondary" href="#services">See what we build</a>
+          </div>
+          <div class="hero-points" aria-label="KJR Labs capabilities">
+            <span>Websites</span>
+            <span>Chrome extensions</span>
+            <span>Custom software</span>
+            <span>Automation</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 620 520" role="img">
+            <defs>
+              <linearGradient id="screen" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#0f172a"/>
+                <stop offset="1" stop-color="#1e3a8a"/>
+              </linearGradient>
+              <linearGradient id="accent" x1="0" x2="1">
+                <stop offset="0" stop-color="#38bdf8"/>
+                <stop offset="1" stop-color="#f59e0b"/>
+              </linearGradient>
+            </defs>
+            <rect x="48" y="64" width="430" height="292" rx="24" fill="url(#screen)"/>
+            <rect x="78" y="96" width="180" height="18" rx="9" fill="#e0f2fe" opacity=".95"/>
+            <rect x="78" y="136" width="332" height="12" rx="6" fill="#93c5fd" opacity=".58"/>
+            <rect x="78" y="164" width="282" height="12" rx="6" fill="#93c5fd" opacity=".38"/>
+            <rect x="78" y="214" width="108" height="74" rx="14" fill="#22c55e" opacity=".9"/>
+            <rect x="206" y="214" width="108" height="74" rx="14" fill="#38bdf8" opacity=".9"/>
+            <rect x="334" y="214" width="108" height="74" rx="14" fill="#f59e0b" opacity=".9"/>
+            <path d="M102 326h322" stroke="#e0f2fe" stroke-width="10" stroke-linecap="round" opacity=".72"/>
+            <circle cx="498" cy="132" r="58" fill="#f8fafc"/>
+            <path d="M470 130h56M498 102v56" stroke="#2563eb" stroke-width="13" stroke-linecap="round"/>
+            <rect x="350" y="322" width="196" height="130" rx="22" fill="#fff7ed"/>
+            <path d="M382 362h128M382 394h86" stroke="#0f172a" stroke-width="14" stroke-linecap="round" opacity=".72"/>
+            <path d="M388 430l40-30 36 20 52-48" fill="none" stroke="url(#accent)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="96" cy="398" r="52" fill="#e0f2fe"/>
+            <path d="M78 398l16 16 32-38" fill="none" stroke="#16a34a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
       </div>
-      <div class="hud-item">
-        <span>Nearby</span>
-        <strong data-nearby>Explore the hub</strong>
-      </div>
-    </aside>
-
-    <section class="dialogue-card" id="dialogue" data-dialogue hidden aria-live="polite">
-      <p class="dialogue-kicker" data-dialogue-kicker>Start Camp</p>
-      <h2 data-dialogue-title>KJR Labs</h2>
-      <p data-dialogue-copy>Walk the roads. Each place reveals one part of the studio.</p>
-      <div class="dialogue-actions" data-dialogue-actions></div>
     </section>
 
-    <div class="tap-marker" data-tap-marker hidden></div>
-    <div class="interaction-prompt" data-prompt hidden>Walk closer to interact</div>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Services</p>
+          <h2>Useful digital products, built without drama.</h2>
+          <p>Bring the outcome you want. We help define the practical version, design the user flow, build it, and make it ready to use.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span>01</span>
+            <h3>Business websites</h3>
+            <p>Modern websites, landing pages, service pages, SEO-ready structure, and contact flows that turn visitors into leads.</p>
+          </article>
+          <article class="service-card">
+            <span>02</span>
+            <h3>Custom software</h3>
+            <p>Internal tools, dashboards, portals, admin systems, and apps shaped around your exact workflow.</p>
+          </article>
+          <article class="service-card">
+            <span>03</span>
+            <h3>Chrome extensions</h3>
+            <p>Browser utilities, productivity tools, workflow helpers, and extension-based products from idea to packaged build.</p>
+          </article>
+          <article class="service-card">
+            <span>04</span>
+            <h3>Automation systems</h3>
+            <p>Reduce manual work with scripts, integrations, reporting flows, data movement, and repeatable business processes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <noscript>
-      <section class="noscript-panel">
-        <h1>KJR Labs builds websites, Chrome extensions, custom software, apps, and automation systems.</h1>
-        <p>This site is a playable world and needs JavaScript to run. Email kjrlabs9@gmail.com to start a build.</p>
-      </section>
-    </noscript>
+    <section class="section alt" id="process">
+      <div class="container process-grid">
+        <div>
+          <p class="eyebrow">Process</p>
+          <h2>From unclear requirement to working launch.</h2>
+          <p class="section-copy">You do not need a perfect brief. A rough business problem is enough to start. We convert it into scope, screens, build tasks, and a usable first version.</p>
+        </div>
+        <ol class="process-list">
+          <li><strong>Understand</strong><span>We clarify users, workflow, must-have features, and what success looks like.</span></li>
+          <li><strong>Shape</strong><span>We turn the idea into a simple flow, page structure, or product spec.</span></li>
+          <li><strong>Build</strong><span>We implement the website, extension, app, dashboard, or automation.</span></li>
+          <li><strong>Polish</strong><span>We test, improve UX, clean rough edges, and prepare the launch.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="fit">
+      <div class="container split-grid">
+        <div class="fit-card">
+          <p class="eyebrow">Best fit</p>
+          <h2>Good for customers who know what they need solved.</h2>
+          <p>If you need a practical digital system, a customer-facing site, a browser tool, or a workflow product, KJR Labs can help you get from idea to shipped version.</p>
+        </div>
+        <div class="check-list">
+          <div><strong>For founders</strong><span>MVPs, landing pages, tools, and experiments.</span></div>
+          <div><strong>For businesses</strong><span>Websites, dashboards, automations, and internal software.</span></div>
+          <div><strong>For teams</strong><span>Process tools, browser helpers, and repeatable workflows.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-card">
+        <p class="eyebrow">Contact us</p>
+        <h2>Tell us what you want to build.</h2>
+        <p>Send a rough brief with what you need, who will use it, and what the first version should do. We will reply with the practical next step.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="mailto:kjrlabs9@gmail.com?subject=Project%20brief%20for%20KJR%20Labs&body=Hi%20KJR%20Labs%2C%0A%0AI%20want%20to%20build%3A%0A%0AWho%20will%20use%20it%3A%0A%0AWhat%20should%20it%20do%3A%0A%0ATimeline%20or%20budget%20range%3A%0A%0AReferences%3A%0A">Email the brief</a>
+          <a class="button secondary" href="mailto:kjrlabs9@gmail.com">kjrlabs9@gmail.com</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script type="module" src="js/site.js"></script>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#top">
+          <img src="images/logo-kjr-labs.png" alt="" width="36" height="36">
+          <span>KJR Labs</span>
+        </a>
+        <p>Software agency for websites, extensions, custom software, apps, dashboards, and automation.</p>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <a href="mailto:kjrlabs9@gmail.com">kjrlabs9@gmail.com</a>
+        <span>Vadodara, Gujarat, India</span>
+      </div>
+      <div>
+        <h2>Links</h2>
+        <a href="terms.html">Terms</a>
+        <a href="privacy-policy.html">Privacy</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-year></span> KJR Labs</span>
+      <span>Built for practical software work.</span>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
 </body>
 </html>
