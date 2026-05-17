@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KJR Labs | Walk Through a Software Studio</title>
-  <meta name="description" content="Explore KJR Labs as an interactive 3D journey: websites, Chrome extensions, custom software, apps, automation systems, and product experiments revealed through portals.">
+  <title>KJR Labs | Play Through a Software Studio</title>
+  <meta name="description" content="Explore KJR Labs as a playable open-world software studio: websites, Chrome extensions, custom software, apps, automation systems, and project showcases.">
   <meta name="author" content="KJR Labs">
   <link rel="canonical" href="https://kjrlabs.in/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kjrlabs.in/">
-  <meta property="og:title" content="KJR Labs | Walk Through a Software Studio">
-  <meta property="og:description" content="A game-like software agency website where clients walk through portals for services, projects, process, and contact.">
+  <meta property="og:title" content="KJR Labs | Play Through a Software Studio">
+  <meta property="og:description" content="A game-like agency website where clients explore services, projects, process, and contact by walking through a playable world.">
   <meta property="og:image" content="https://kjrlabs.in/images/logo-kjr-labs.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="KJR Labs | Walk Through a Software Studio">
-  <meta name="twitter:description" content="Websites, Chrome extensions, custom software, apps, automation systems, and product launches as an interactive 3D journey.">
+  <meta name="twitter:title" content="KJR Labs | Play Through a Software Studio">
+  <meta name="twitter:description" content="Websites, Chrome extensions, custom software, apps, automation systems, and product launches as a playable open-world journey.">
   <meta name="twitter:image" content="https://kjrlabs.in/images/logo-kjr-labs.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
@@ -42,61 +42,60 @@
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#studio-panel">Skip to studio panel</a>
-  <main class="game-shell" aria-label="Interactive KJR Labs software studio journey">
-    <canvas id="world" aria-label="3D path through KJR Labs portals"></canvas>
+  <a class="skip-link" href="#dialogue">Skip to current dialogue</a>
+  <main class="game-shell" aria-label="Playable KJR Labs software studio world">
+    <canvas id="world" aria-label="Playable KJR Labs open-world agency map"></canvas>
 
-    <header class="game-topbar">
-      <a class="brand" href="#start" data-jump="start" aria-label="KJR Labs start portal">
-        <img src="images/logo-kjr-labs.png" alt="" width="40" height="40">
-        <span>KJR Labs</span>
-      </a>
-      <nav class="portal-nav" aria-label="Portal shortcuts">
-        <button type="button" data-jump="services">Services</button>
-        <button type="button" data-jump="projects">Projects</button>
-        <button type="button" data-jump="contact">Contact</button>
-      </nav>
-    </header>
-
-    <section class="intro-card" aria-label="Game introduction">
-      <p class="eyebrow">A walkable software agency</p>
-      <h1>Carry the idea. Follow the lantern. Find what KJR Labs can build for you.</h1>
-      <p>You are the founder with a rough idea. Walk the floating path, enter portals, and see how websites, extensions, software, apps, and automation become launch-ready products.</p>
-      <div class="intro-actions">
-        <button class="button primary" type="button" data-jump="services">Start the walk</button>
-        <button class="button ghost" type="button" data-jump="contact">Go to contact portal</button>
+    <section class="loading-screen" data-loading aria-label="Loading KJR Labs world">
+      <div class="loading-card">
+        <img src="images/logo-kjr-labs.png" alt="" width="56" height="56">
+        <p class="eyebrow">KJR Labs</p>
+        <h1>Lighting the idea lantern</h1>
+        <div class="loading-bar" aria-hidden="true"><span data-loading-bar></span></div>
+        <p data-loading-status>Drawing the first road...</p>
       </div>
     </section>
 
-    <aside class="studio-panel" id="studio-panel" aria-live="polite">
-      <p class="panel-kicker" data-panel-kicker>Portal 01</p>
-      <h2 data-panel-title>The Lantern Path</h2>
-      <p data-panel-copy>KJR Labs builds software that moves businesses forward. Use WASD, arrow keys, or click a glowing portal to walk.</p>
-      <div class="panel-actions" data-panel-actions></div>
-      <div class="project-list" data-project-list hidden></div>
+    <header class="game-topbar">
+      <a class="brand" href="#start" aria-label="KJR Labs start camp">
+        <img src="images/logo-kjr-labs.png" alt="" width="40" height="40">
+        <span>KJR Labs</span>
+      </a>
+      <div class="topbar-hint">
+        <span>Desktop</span>
+        <strong>WASD / Arrows</strong>
+      </div>
+      <div class="topbar-hint mobile-only">
+        <span>Mobile</span>
+        <strong>Tap road to walk</strong>
+      </div>
+    </header>
+
+    <aside class="hud" aria-label="Game status">
+      <div class="hud-item">
+        <span>Area</span>
+        <strong data-area>Start Camp</strong>
+      </div>
+      <div class="hud-item">
+        <span>Nearby</span>
+        <strong data-nearby>Explore the hub</strong>
+      </div>
     </aside>
 
-    <div class="hud">
-      <div class="hud-item">
-        <span>Move</span>
-        <strong>WASD / Arrows / Click</strong>
-      </div>
-      <div class="hud-item">
-        <span>Current portal</span>
-        <strong data-current>Start</strong>
-      </div>
-    </div>
+    <section class="dialogue-card" id="dialogue" data-dialogue hidden aria-live="polite">
+      <p class="dialogue-kicker" data-dialogue-kicker>Start Camp</p>
+      <h2 data-dialogue-title>KJR Labs</h2>
+      <p data-dialogue-copy>Walk the roads. Each place reveals one part of the studio.</p>
+      <div class="dialogue-actions" data-dialogue-actions></div>
+    </section>
 
-    <div class="mobile-controls" aria-label="Movement controls">
-      <button type="button" data-step="prev">Back</button>
-      <button type="button" data-step="next">Forward</button>
-      <button type="button" data-jump="projects">Projects</button>
-    </div>
+    <div class="tap-marker" data-tap-marker hidden></div>
+    <div class="interaction-prompt" data-prompt hidden>Walk closer to interact</div>
 
     <noscript>
       <section class="noscript-panel">
         <h1>KJR Labs builds websites, Chrome extensions, custom software, apps, and automation systems.</h1>
-        <p>This site is an interactive 3D journey and needs JavaScript to run. Email kjrlabs9@gmail.com to start a build.</p>
+        <p>This site is a playable world and needs JavaScript to run. Email kjrlabs9@gmail.com to start a build.</p>
       </section>
     </noscript>
   </main>
