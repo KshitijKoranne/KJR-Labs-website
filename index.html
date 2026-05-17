@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KJR Labs | Software Agency for Websites, Extensions, Apps and Automation</title>
-  <meta name="description" content="KJR Labs designs and builds conversion-focused websites, Chrome extensions, custom software, web apps, automation systems, and launch-ready digital products.">
+  <title>KJR Labs | Walk Through a Software Studio</title>
+  <meta name="description" content="Explore KJR Labs as an interactive 3D journey: websites, Chrome extensions, custom software, apps, automation systems, and product experiments revealed through portals.">
   <meta name="author" content="KJR Labs">
   <link rel="canonical" href="https://kjrlabs.in/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kjrlabs.in/">
-  <meta property="og:title" content="KJR Labs | Build the software your business is waiting for">
-  <meta property="og:description" content="Websites that sell, extensions that users keep, custom software that removes busywork, and product launches that feel premium from day one.">
+  <meta property="og:title" content="KJR Labs | Walk Through a Software Studio">
+  <meta property="og:description" content="A game-like software agency website where clients walk through portals for services, projects, process, and contact.">
   <meta property="og:image" content="https://kjrlabs.in/images/logo-kjr-labs.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="KJR Labs | Software Agency">
-  <meta name="twitter:description" content="Websites, Chrome extensions, custom software, apps, and automation systems designed to convert and ship.">
+  <meta name="twitter:title" content="KJR Labs | Walk Through a Software Studio">
+  <meta name="twitter:description" content="Websites, Chrome extensions, custom software, apps, automation systems, and product launches as an interactive 3D journey.">
   <meta name="twitter:image" content="https://kjrlabs.in/images/logo-kjr-labs.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
@@ -42,273 +42,65 @@
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="index.html" aria-label="KJR Labs home">
+  <a class="skip-link" href="#studio-panel">Skip to studio panel</a>
+  <main class="game-shell" aria-label="Interactive KJR Labs software studio journey">
+    <canvas id="world" aria-label="3D path through KJR Labs portals"></canvas>
+
+    <header class="game-topbar">
+      <a class="brand" href="#start" data-jump="start" aria-label="KJR Labs start portal">
         <img src="images/logo-kjr-labs.png" alt="" width="40" height="40">
         <span>KJR Labs</span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
-        <span class="sr-only">Toggle navigation</span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="nav-links" id="nav-links">
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#method">Method</a>
-        <a class="nav-cta" href="contact.html">Start a build</a>
-      </div>
-    </nav>
-  </header>
+      <nav class="portal-nav" aria-label="Portal shortcuts">
+        <button type="button" data-jump="services">Services</button>
+        <button type="button" data-jump="projects">Projects</button>
+        <button type="button" data-jump="contact">Contact</button>
+      </nav>
+    </header>
 
-  <main id="main">
-    <section class="hero">
-      <div class="hero-grid container">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Software agency for ambitious small teams</p>
-          <h1>We turn messy ideas into websites, apps and extensions people actually use.</h1>
-          <p class="hero-text">
-            KJR Labs is your build partner for conversion-focused websites, Chrome extensions, custom software, automation systems and product experiments that need to look premium, work fast and ship without drama.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="contact.html">Start your build</a>
-            <a class="button secondary" href="#work">See what we ship</a>
-          </div>
-          <div class="hero-badges" aria-label="KJR Labs capabilities">
-            <span>Websites that sell</span>
-            <span>Extensions users keep</span>
-            <span>Custom software that saves hours</span>
-          </div>
-        </div>
-
-        <div class="launch-console reveal" data-tilt aria-label="KJR Labs launch console preview">
-          <div class="console-top">
-            <span class="console-dot"></span>
-            <span class="console-dot"></span>
-            <span class="console-dot"></span>
-            <strong>Launch Room</strong>
-          </div>
-          <div class="console-stage">
-            <div class="radar" aria-hidden="true">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="launch-card active">
-              <span>01 / Position</span>
-              <strong>Make the offer impossible to misunderstand.</strong>
-            </div>
-            <div class="launch-card">
-              <span>02 / Build</span>
-              <strong>Design the first version users can touch.</strong>
-            </div>
-            <div class="launch-card">
-              <span>03 / Ship</span>
-              <strong>Polish, package, publish and improve.</strong>
-            </div>
-          </div>
-          <div class="console-metrics">
-            <div>
-              <span>Build lanes</span>
-              <strong>4</strong>
-            </div>
-            <div>
-              <span>Showcase</span>
-              <strong>9</strong>
-            </div>
-            <div>
-              <span>Stack</span>
-              <strong>Lean</strong>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="signal-strip" aria-hidden="true">
-        <span>Strategy</span><span>Interface</span><span>Frontend</span><span>Backend</span><span>Chrome APIs</span><span>Automation</span><span>SEO</span><span>Payments</span><span>Launch</span>
+    <section class="intro-card" aria-label="Game introduction">
+      <p class="eyebrow">A walkable software agency</p>
+      <h1>Carry the idea. Follow the lantern. Find what KJR Labs can build for you.</h1>
+      <p>You are the founder with a rough idea. Walk the floating path, enter portals, and see how websites, extensions, software, apps, and automation become launch-ready products.</p>
+      <div class="intro-actions">
+        <button class="button primary" type="button" data-jump="services">Start the walk</button>
+        <button class="button ghost" type="button" data-jump="contact">Go to contact portal</button>
       </div>
     </section>
 
-    <section class="section proof-section" aria-label="Business proof">
-      <div class="container proof-grid reveal">
-        <div>
-          <strong>9</strong>
-          <span>products and utilities in the showcase</span>
-        </div>
-        <div>
-          <strong>4</strong>
-          <span>high-demand build lanes for client work</span>
-        </div>
-        <div>
-          <strong>1</strong>
-          <span>lean studio that can move from brief to launch</span>
-        </div>
-      </div>
-    </section>
+    <aside class="studio-panel" id="studio-panel" aria-live="polite">
+      <p class="panel-kicker" data-panel-kicker>Portal 01</p>
+      <h2 data-panel-title>The Lantern Path</h2>
+      <p data-panel-copy>KJR Labs builds software that moves businesses forward. Use WASD, arrow keys, or click a glowing portal to walk.</p>
+      <div class="panel-actions" data-panel-actions></div>
+      <div class="project-list" data-project-list hidden></div>
+    </aside>
 
-    <section class="section split-section" id="services">
-      <div class="container split-grid">
-        <div class="section-copy reveal">
-          <p class="eyebrow">What you can hire us for</p>
-          <h2>Not just a prettier website. A sharper digital engine.</h2>
-          <p>
-            The best software work makes the business easier to understand, buy from and operate. That is the lens here: every page, extension and internal tool has to earn its place.
-          </p>
-        </div>
-        <div class="offer-grid">
-          <article class="offer-card reveal">
-            <span>01</span>
-            <h3>Conversion websites</h3>
-            <p>Landing pages and business sites that make your offer clear, credible and easy to act on.</p>
-          </article>
-          <article class="offer-card reveal">
-            <span>02</span>
-            <h3>Chrome extensions</h3>
-            <p>Browser tools with crisp UX, permissions handled carefully, packaging, store assets and monetization paths.</p>
-          </article>
-          <article class="offer-card reveal">
-            <span>03</span>
-            <h3>Custom software</h3>
-            <p>Dashboards, portals, workflow systems and internal tools that replace scattered spreadsheets and manual work.</p>
-          </article>
-          <article class="offer-card reveal">
-            <span>04</span>
-            <h3>Product experiments</h3>
-            <p>Fast MVPs, public utilities and weird little internet products that test demand without bloated scope.</p>
-          </article>
-        </div>
+    <div class="hud">
+      <div class="hud-item">
+        <span>Move</span>
+        <strong>WASD / Arrows / Click</strong>
       </div>
-    </section>
+      <div class="hud-item">
+        <span>Current portal</span>
+        <strong data-current>Start</strong>
+      </div>
+    </div>
 
-    <section class="section work-section" id="work">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">Proof of build taste</p>
-          <h2>Nine products. One pattern: useful software shipped with personality.</h2>
-          <p>These projects show what KJR Labs can build: practical web utilities, Chrome extensions, creative generators and playful web products.</p>
-        </div>
-        <div class="work-grid">
-          <article class="work-card featured reveal">
-            <div class="work-preview tools-preview" aria-hidden="true"><span>90+</span><span>Utilities</span><span>SEO</span></div>
-            <div class="work-meta"><span>Web toolkit</span><span>Public product</span></div>
-            <h3>AZ Tools</h3>
-            <p>A professional online toolkit with free utilities for developers, creators and operators.</p>
-            <a href="https://github.com/KshitijKoranne/aztools-next" target="_blank" rel="noreferrer">View repo</a>
-          </article>
-          <article class="work-card reveal">
-            <div class="work-preview time-preview" aria-hidden="true"><span>Tabs</span><span>Scroll</span><span>Video</span></div>
-            <div class="work-meta"><span>Chrome extension</span><span>Pro upgrade</span></div>
-            <h3>Tab Time Machine</h3>
-            <p>Restores recently closed tabs with useful browsing context preserved.</p>
-            <a href="https://github.com/KshitijKoranne/tab-time-machine" target="_blank" rel="noreferrer">View repo</a>
-          </article>
-          <article class="work-card reveal">
-            <div class="work-preview atlas-preview" aria-hidden="true"><span>Maps</span><span>Posters</span><span>8K</span></div>
-            <div class="work-meta"><span>Creative web app</span><span>Exports</span></div>
-            <h3>Atlasify</h3>
-            <p>Turn any place into a customizable map poster, then export it from the browser.</p>
-            <a href="https://github.com/KshitijKoranne/Atlasify" target="_blank" rel="noreferrer">View repo</a>
-          </article>
-          <article class="work-card reveal">
-            <div class="work-preview walls-preview" aria-hidden="true"><span>UUID</span><span>Canvas</span><span>4K</span></div>
-            <div class="work-meta"><span>Generative tool</span><span>Browser-only</span></div>
-            <h3>UUIDWalls</h3>
-            <p>Turns UUIDs into deterministic wallpapers with downloadable generative patterns.</p>
-            <a href="https://github.com/KshitijKoranne/uuidwalls" target="_blank" rel="noreferrer">View repo</a>
-          </article>
-          <article class="work-card reveal">
-            <div class="work-preview fun-preview" aria-hidden="true"><span>Games</span><span>Culture</span><span>Share</span></div>
-            <div class="work-meta"><span>Playful web product</span><span>Consumer</span></div>
-            <h3>wastemytime.fun</h3>
-            <p>Small interactive experiences built for casual browsing and instant sharing.</p>
-            <a href="https://github.com/KshitijKoranne/wastemytime.fun" target="_blank" rel="noreferrer">View repo</a>
-          </article>
-          <article class="work-card reveal">
-            <div class="work-preview verbatim-preview" aria-hidden="true"><span>Type</span><span>Quotes</span><span>PWA</span></div>
-            <div class="work-meta"><span>Editorial interface</span><span>No framework</span></div>
-            <h3>Verbatim</h3>
-            <p>A living typographic quote wall built around browsing, motion and reading rhythm.</p>
-            <a href="https://github.com/KshitijKoranne/verbatim" target="_blank" rel="noreferrer">View repo</a>
-          </article>
-          <article class="work-card reveal">
-            <div class="work-preview symbols-preview" aria-hidden="true"><span>⌘</span><span>★</span><span>→</span></div>
-            <div class="work-meta"><span>Chrome extension</span><span>Offline UX</span></div>
-            <h3>Quick Symbols</h3>
-            <p>Keyboard-first symbol search with favorites, history and fast copy interactions.</p>
-            <a href="https://github.com/KshitijKoranne/quick-symbols-extension" target="_blank" rel="noreferrer">View repo</a>
-          </article>
-          <article class="work-card reveal">
-            <div class="work-preview video-preview" aria-hidden="true"><span>YouTube</span><span>Snap</span><span>Utility</span></div>
-            <div class="work-meta"><span>Creator utility</span><span>Focused tool</span></div>
-            <h3>YT Snap</h3>
-            <p>A lightweight utility for extracting and downloading YouTube thumbnails.</p>
-            <a href="https://github.com/KshitijKoranne/yt-snap" target="_blank" rel="noreferrer">View repo</a>
-          </article>
-          <article class="work-card reveal">
-            <div class="work-preview location-preview" aria-hidden="true"><span>Hover</span><span>Cache</span><span>Reveal</span></div>
-            <div class="work-meta"><span>Chrome extension</span><span>Browser utility</span></div>
-            <h3>X Location Reveal</h3>
-            <p>Reveals public X/Twitter profile location signals on hover with local caching.</p>
-            <a href="https://github.com/KshitijKoranne/x-location-reveal" target="_blank" rel="noreferrer">View repo</a>
-          </article>
-        </div>
-      </div>
-    </section>
+    <div class="mobile-controls" aria-label="Movement controls">
+      <button type="button" data-step="prev">Back</button>
+      <button type="button" data-step="next">Forward</button>
+      <button type="button" data-jump="projects">Projects</button>
+    </div>
 
-    <section class="section method-section" id="method">
-      <div class="container method-grid">
-        <div class="section-copy reveal">
-          <p class="eyebrow">The KJR method</p>
-          <h2>Clarity first. Prototype second. Launch always.</h2>
-          <p>Your first version should not feel like a compromise. It should feel like the sharpest possible slice of the business outcome.</p>
-        </div>
-        <div class="method-steps">
-          <article class="method-step reveal"><span>01</span><h3>Find the money page</h3><p>We define the page, flow or feature that makes the business case obvious.</p></article>
-          <article class="method-step reveal"><span>02</span><h3>Design the product moment</h3><p>We build the one interaction visitors remember: demo, tool, card, flow or extension behavior.</p></article>
-          <article class="method-step reveal"><span>03</span><h3>Ship the complete surface</h3><p>We finish the boring but critical parts: responsive polish, SEO, metadata, speed, packaging and handoff.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section close-section">
-      <div class="container close-card reveal">
-        <p class="eyebrow">Ready when you are</p>
-        <h2>Bring the idea. We will turn it into something people can click, use and buy.</h2>
-        <p>Send the rough brief. Website, extension, internal tool, SaaS MVP, automation system or an odd product idea you cannot stop thinking about.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="contact.html">Start a build with KJR Labs</a>
-          <a class="button secondary" href="mailto:kjrlabs9@gmail.com?subject=Project%20brief%20for%20KJR%20Labs&body=Hi%20KJR%20Labs%2C%0A%0AI%20want%20to%20build%3A%0A%0AWho%20it%20is%20for%3A%0A%0AWhat%20should%20happen%20first%3A%0A%0ATimeline%20or%20budget%20range%3A%0A%0ALinks%20or%20references%3A%0A">Email the brief</a>
-        </div>
-      </div>
-    </section>
+    <noscript>
+      <section class="noscript-panel">
+        <h1>KJR Labs builds websites, Chrome extensions, custom software, apps, and automation systems.</h1>
+        <p>This site is an interactive 3D journey and needs JavaScript to run. Email kjrlabs9@gmail.com to start a build.</p>
+      </section>
+    </noscript>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand footer-brand" href="index.html">
-          <img src="images/logo-kjr-labs.png" alt="" width="36" height="36">
-          <span>KJR Labs</span>
-        </a>
-        <p>Software agency for websites, extensions, custom software and product launches.</p>
-      </div>
-      <div>
-        <h2>Contact</h2>
-        <a href="mailto:kjrlabs9@gmail.com">kjrlabs9@gmail.com</a>
-        <span>Vadodara, Gujarat, India</span>
-      </div>
-      <div>
-        <h2>Pages</h2>
-        <a href="contact.html">Start a build</a>
-        <a href="terms.html">Terms</a>
-        <a href="privacy-policy.html">Privacy</a>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <span>© <span data-year></span> KJR Labs</span>
-      <span>Built lean. Made to convert.</span>
-    </div>
-  </footer>
-
-  <script src="js/site.js"></script>
+  <script type="module" src="js/site.js"></script>
 </body>
 </html>
