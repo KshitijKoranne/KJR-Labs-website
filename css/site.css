@@ -217,9 +217,13 @@ button {
 .dialogue-card {
   left: 50%;
   bottom: 18px;
-  width: min(520px, calc(100% - 32px));
-  padding: 18px;
+  width: min(640px, calc(100% - 32px));
+  padding: 42px 46px 48px;
   transform: translateX(-50%);
+  border-color: transparent;
+  background:
+    linear-gradient(rgba(8, 15, 31, 0.62), rgba(8, 15, 31, 0.72)),
+    url("../images/game/dialogue-box.png") center / 100% 100% no-repeat;
 }
 
 .dialogue-card[hidden],
@@ -232,7 +236,7 @@ button {
 .loading-card h1,
 .noscript-panel h1 {
   margin: 5px 0 0;
-  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-size: clamp(1.22rem, 2.7vw, 1.75rem);
   line-height: 1.08;
   letter-spacing: 0;
 }
@@ -240,7 +244,7 @@ button {
 .dialogue-card p,
 .loading-card p,
 .noscript-panel p {
-  margin: 9px 0 0;
+  margin: 8px 0 0;
   color: var(--muted);
   font-size: 0.98rem;
   line-height: 1.52;
@@ -338,7 +342,9 @@ button {
   margin-top: 22px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(rgba(12, 20, 40, 0.42), rgba(12, 20, 40, 0.42)),
+    url("../images/game/loading-bar.png") center / 100% 100% no-repeat;
 }
 
 .loading-bar span {
@@ -436,7 +442,7 @@ button {
 
   .dialogue-card {
     bottom: 12px;
-    padding: 15px;
+    padding: 32px 30px 34px;
   }
 }
 

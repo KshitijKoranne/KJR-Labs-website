@@ -2,12 +2,22 @@ import * as THREE from "https://unpkg.com/three@0.160.0/build/three.module.js";
 
 const ASSET_PATHS = {
   character: "images/game/character.png",
-  tiles: "images/game/tiles.png",
-  landmarks: "images/game/landmarks.png",
-  projectPortals: "images/game/project-portals.png",
-  ui: "images/game/ui.png"
+  landmarkStart: "images/game/landmark-start.png",
+  landmarkServices: "images/game/landmark-services.png",
+  landmarkShowcase: "images/game/landmark-showcase.png",
+  landmarkProcess: "images/game/landmark-process.png",
+  landmarkContact: "images/game/landmark-contact.png",
+  project0: "images/game/project-0.png",
+  project1: "images/game/project-1.png",
+  project2: "images/game/project-2.png",
+  project3: "images/game/project-3.png",
+  project4: "images/game/project-4.png",
+  project5: "images/game/project-5.png",
+  project6: "images/game/project-6.png",
+  project7: "images/game/project-7.png",
+  project8: "images/game/project-8.png"
 };
-const ENABLE_GENERATED_ASSETS = false;
+const ENABLE_GENERATED_ASSETS = true;
 
 const emailHref = "mailto:kjrlabs9@gmail.com?subject=Project%20brief%20for%20KJR%20Labs&body=Hi%20KJR%20Labs%2C%0A%0AI%20want%20to%20build%3A%0A%0AWho%20it%20is%20for%3A%0A%0AWhat%20should%20happen%20first%3A%0A%0ATimeline%20or%20budget%20range%3A%0A%0ALinks%20or%20references%3A%0A";
 
@@ -76,7 +86,9 @@ const locations = [
     copy: "Walk the roads. Each landmark reveals one way KJR Labs can build it.",
     position: { x: 0, z: 0 },
     color: 0xffd46b,
-    kind: "camp"
+    kind: "camp",
+    asset: "landmarkStart",
+    scale: [5.5, 5]
   },
   {
     id: "services",
@@ -85,7 +97,9 @@ const locations = [
     copy: "Websites, Chrome extensions, apps, automations, and custom software.",
     position: { x: 0, z: -20 },
     color: 0x71f4ff,
-    kind: "workshop"
+    kind: "workshop",
+    asset: "landmarkServices",
+    scale: [5.1, 5.25]
   },
   {
     id: "showcase",
@@ -94,7 +108,9 @@ const locations = [
     copy: "Nine branches. Each one leads to a product or experiment.",
     position: { x: 22, z: 0 },
     color: 0xa78bfa,
-    kind: "gallery"
+    kind: "gallery",
+    asset: "landmarkShowcase",
+    scale: [5.15, 5.65]
   },
   {
     id: "process",
@@ -103,7 +119,9 @@ const locations = [
     copy: "Sharpen the idea, design the memory, build the useful version, polish the launch.",
     position: { x: 0, z: 18 },
     color: 0x87f7a7,
-    kind: "forge"
+    kind: "forge",
+    asset: "landmarkProcess",
+    scale: [5.15, 5.75]
   },
   {
     id: "contact",
@@ -113,6 +131,8 @@ const locations = [
     position: { x: -22, z: 0 },
     color: 0xff93b5,
     kind: "portal",
+    asset: "landmarkContact",
+    scale: [5.15, 5.1],
     actions: [{ label: "Email brief", href: emailHref, primary: true }]
   }
 ];
@@ -214,17 +234,11 @@ scene.add(sun);
 const lantern = new THREE.PointLight(0xffd46b, 4.6, 9, 1.8);
 scene.add(lantern);
 
+const interactionObjects = new Map();
+const assetTextures = ENABLE_GENERATED_ASSETS ? await loadGameAssets() : {};
 const player = createPlayer();
 player.position.set(0, 0.08, 2.5);
 scene.add(player);
-
-const interactionObjects = new Map();
-const assetTextures = {};
-if (ENABLE_GENERATED_ASSETS) {
-  void loadGameAssets().then((textures) => {
-    Object.assign(assetTextures, textures);
-  });
-}
 
 showLoadingProgress();
 buildWorld(assetTextures);
@@ -372,11 +386,13 @@ function createLandmarks() {
     group.position.set(location.position.x, 0.08, location.position.z);
     group.userData.locationId = location.id;
 
-    if (location.kind === "camp") createCamp(group, location.color);
-    if (location.kind === "workshop") createWorkshop(group, location.color);
-    if (location.kind === "gallery") createGallery(group, location.color);
-    if (location.kind === "forge") createForge(group, location.color);
-    if (location.kind === "portal") createContactPortal(group, location.color);
+    if (!addAssetSprite(group, location.asset, location.scale, 2.45)) {
+      if (location.kind === "camp") createCamp(group, location.color);
+      if (location.kind === "workshop") createWorkshop(group, location.color);
+      if (location.kind === "gallery") createGallery(group, location.color);
+      if (location.kind === "forge") createForge(group, location.color);
+      if (location.kind === "portal") createContactPortal(group, location.color);
+    }
 
     const glow = new THREE.PointLight(location.color, 1.8, 8, 2);
     glow.position.y = 2.4;
@@ -424,15 +440,16 @@ function createProjectPortal(location, index) {
   const group = new THREE.Group();
   group.position.set(location.position.x, 0.08, location.position.z);
   group.userData.locationId = location.id;
-  group.add(createCrystal(0, 0, location.color, 1.25));
-
-  const base = new THREE.Mesh(
-    new THREE.CylinderGeometry(1.05, 1.22, 0.3, 7),
-    new THREE.MeshStandardMaterial({ color: 0x6b5b42, roughness: 0.88 })
-  );
-  base.position.y = 0.15;
-  base.castShadow = true;
-  group.add(base);
+  if (!addAssetSprite(group, `project${index}`, [3.25, 3.55], 1.8)) {
+    group.add(createCrystal(0, 0, location.color, 1.25));
+    const base = new THREE.Mesh(
+      new THREE.CylinderGeometry(1.05, 1.22, 0.3, 7),
+      new THREE.MeshStandardMaterial({ color: 0x6b5b42, roughness: 0.88 })
+    );
+    base.position.y = 0.15;
+    base.castShadow = true;
+    group.add(base);
+  }
 
   const light = new THREE.PointLight(location.color, 1.25, 5, 2);
   light.position.y = 1.7;
@@ -519,6 +536,28 @@ function createSign(x, z, text, color) {
   scene.add(sprite);
 }
 
+function addAssetSprite(group, textureKey, scale, y) {
+  const texture = assetTextures[textureKey];
+  if (!texture) return false;
+  const sprite = new THREE.Sprite(new THREE.SpriteMaterial({
+    map: texture,
+    transparent: true,
+    alphaTest: 0.08
+  }));
+  sprite.scale.set(scale[0], scale[1], 1);
+  sprite.position.y = y;
+  group.add(sprite);
+
+  const shadow = new THREE.Mesh(
+    new THREE.CircleGeometry(Math.max(scale[0], scale[1]) * 0.28, 28),
+    new THREE.MeshBasicMaterial({ color: 0x172018, transparent: true, opacity: 0.18, depthWrite: false })
+  );
+  shadow.rotation.x = -Math.PI / 2;
+  shadow.position.y = 0.025;
+  group.add(shadow);
+  return true;
+}
+
 function createLabel(text, color) {
   const labelCanvas = document.createElement("canvas");
   labelCanvas.width = 512;
@@ -594,6 +633,26 @@ function createBush(x, z, index) {
 
 function createPlayer() {
   const group = new THREE.Group();
+  if (assetTextures.character) {
+    const sprite = new THREE.Sprite(new THREE.SpriteMaterial({
+      map: assetTextures.character,
+      transparent: true,
+      alphaTest: 0.08
+    }));
+    sprite.scale.set(1.55, 2.72, 1);
+    sprite.position.y = 1.38;
+    group.add(sprite);
+
+    const idea = new THREE.Mesh(
+      new THREE.IcosahedronGeometry(0.13, 1),
+      new THREE.MeshStandardMaterial({ color: 0xffd46b, emissive: 0xffd46b, emissiveIntensity: 2.4 })
+    );
+    idea.position.set(0.5, 1.25, -0.05);
+    group.add(idea);
+    group.userData.idea = idea;
+    return group;
+  }
+
   const cloak = new THREE.Mesh(
     new THREE.ConeGeometry(0.42, 1.05, 9),
     new THREE.MeshStandardMaterial({ color: 0x35527c, roughness: 0.78 })
