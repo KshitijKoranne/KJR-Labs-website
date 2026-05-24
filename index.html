@@ -43,169 +43,205 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="KJR Labs home">
-        <img src="images/logo-kjr-labs.png" alt="" width="40" height="40">
-        <span>KJR Labs</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="nav-links" id="nav-links">
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
-        <a href="#systems">Systems</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="container hero-grid">
+  <div class="page-shell">
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Main navigation">
+        <div class="nav-left">
+          <a href="#top">Home</a>
+          <span></span>
+          <a href="#services">Service</a>
+          <span></span>
+          <a href="#process">Process</a>
+        </div>
+
+        <a class="brand" href="#top" aria-label="KJR Labs home">
+          <img src="images/logo-kjr-labs.png" alt="" width="30" height="30">
+          <span>KJR Labs</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#systems">Systems</a>
+          <span></span>
+          <a href="#contact">Get In Touch</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-pattern" aria-hidden="true"></div>
         <div class="hero-copy">
-          <p class="eyebrow">Software development agency</p>
-          <h1>We turn business requirements into shipped software.</h1>
-          <p class="hero-text">KJR Labs designs and builds websites, Chrome extensions, custom software, dashboards, apps, and automations for customers who need practical digital systems.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="mailto:kjrlabs9@gmail.com?subject=Project%20brief%20for%20KJR%20Labs&body=Hi%20KJR%20Labs%2C%0A%0AI%20want%20to%20build%3A%0A%0AWho%20will%20use%20it%3A%0A%0AWhat%20should%20it%20do%3A%0A%0ATimeline%20or%20budget%20range%3A%0A%0AReferences%3A%0A">Start a build</a>
-            <a class="button secondary" href="#services">View services</a>
-          </div>
+          <h1>We Build Digital Products That Power Growth</h1>
+          <p>KJR Labs is a software development agency crafting high-performance websites, Chrome extensions, dashboards, apps, and automation systems for startups and growing businesses.</p>
         </div>
-
-        <aside class="signal-panel" aria-label="KJR Labs system overview">
-          <div class="panel-top">
-            <span></span><span></span><span></span>
-            <strong>kjr-labs/system.map</strong>
-          </div>
-          <div class="data-map">
-            <span class="node n1"></span>
-            <span class="node n2"></span>
-            <span class="node n3"></span>
-            <span class="node n4"></span>
-            <span class="node n5"></span>
-            <svg viewBox="0 0 520 360" aria-hidden="true">
-              <path d="M86 226C152 112 278 86 438 116" />
-              <path d="M102 248C218 236 316 250 452 194" />
-              <path d="M158 94C202 190 296 218 404 276" />
-              <path d="M78 166C206 158 318 142 462 84" />
-            </svg>
-          </div>
-          <div class="metrics">
-            <div><span>Scope</span><strong>Web + software</strong></div>
-            <div><span>Mode</span><strong>Build-ready</strong></div>
-            <div><span>Output</span><strong>Launchable</strong></div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="ticker" aria-label="Capabilities">
-      <div class="ticker-track">
-        <span>Websites</span>
-        <span>Custom software</span>
-        <span>Chrome extensions</span>
-        <span>Automation systems</span>
-        <span>Dashboards</span>
-        <span>Web apps</span>
-      </div>
-    </section>
-
-    <section class="section" id="services">
-      <div class="container section-grid">
-        <div class="section-head">
-          <p class="eyebrow">Services</p>
-          <h2>Development support for the systems your business actually needs.</h2>
+        <div class="hero-actions">
+          <a class="button ghost" href="#services">View Our Work</a>
+          <a class="button" href="mailto:kjrlabs9@gmail.com?subject=Project%20brief%20for%20KJR%20Labs&body=Hi%20KJR%20Labs%2C%0A%0AI%20want%20to%20build%3A%0A%0AWho%20will%20use%20it%3A%0A%0AWhat%20should%20it%20do%3A%0A%0ATimeline%20or%20budget%20range%3A%0A%0AReferences%3A%0A">Start A Project</a>
         </div>
-        <div class="service-stack">
+      </section>
+
+      <section class="intro-panels" aria-label="Agency highlights">
+        <article class="intro-card globe-card">
+          <div class="dot-globe" aria-hidden="true"></div>
+          <p>We are a <strong>practical software studio</strong>. From MVPs to internal tools, we help businesses transform ideas into <strong>real-world technology</strong>.</p>
+        </article>
+        <article class="intro-card orbit-card">
+          <div class="orbit-map" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <p>We are a <strong>team of builders and digital strategists</strong> focused on reliable, scalable, and future-ready products.</p>
+        </article>
+      </section>
+
+      <section class="media-strip" aria-label="KJR Labs workbench">
+        <img src="images/kjr-labs-workbench.png" alt="KJR Labs software planning workbench">
+        <span class="corner top-left"></span>
+        <span class="corner top-right"></span>
+        <span class="corner bottom-left"></span>
+        <span class="corner bottom-right"></span>
+      </section>
+
+      <section class="section centered" id="services">
+        <p class="eyebrow">Services</p>
+        <h2>End-To-End Development Services</h2>
+        <p class="section-copy">Choose the build path that fits your current requirement. We keep the scope clear, the interface usable, and the delivery focused.</p>
+        <div class="service-grid">
           <article>
             <span>01</span>
-            <h3>Websites that convert</h3>
-            <p>Company sites, landing pages, service pages, contact flows, and SEO-ready structure.</p>
+            <h3>Website Development</h3>
+            <p>Fast company sites, landing pages, service pages, SEO structure, and conversion-focused contact flows.</p>
           </article>
           <article>
             <span>02</span>
-            <h3>Custom software</h3>
-            <p>Internal portals, dashboards, admin panels, data tools, and workflow-specific applications.</p>
+            <h3>Custom Software</h3>
+            <p>Dashboards, admin panels, portals, workflow tools, data views, and customer-specific software systems.</p>
           </article>
           <article>
             <span>03</span>
-            <h3>Chrome extensions</h3>
-            <p>Browser utilities, productivity tools, workflow helpers, and packaged extension products.</p>
+            <h3>Chrome Extensions</h3>
+            <p>Browser utilities, productivity helpers, paid extension products, workflow add-ons, and packaged releases.</p>
           </article>
           <article>
             <span>04</span>
-            <h3>Automation</h3>
-            <p>Scripts, integrations, reporting flows, data movement, and repeatable process automation.</p>
+            <h3>Automation Systems</h3>
+            <p>Scripts, integrations, reports, alerts, data movement, and repetitive process automation for daily operations.</p>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section dark" id="process">
-      <div class="container process-layout">
+      <section class="section rust-band" id="process">
+        <div class="timeline">
+          <div class="timeline-title">
+            <p class="eyebrow">Process</p>
+            <h2>From Requirement To Launch</h2>
+            <p>You bring the problem, rough idea, or workflow. We shape the first working version, build it, test it, and prepare it for real use.</p>
+          </div>
+          <ol>
+            <li>
+              <strong>01. Map & Scope</strong>
+              <span>Understand users, data, priorities, and the exact outcome required.</span>
+            </li>
+            <li>
+              <strong>02. Design & Build</strong>
+              <span>Create the interface, backend, integrations, and product logic.</span>
+            </li>
+            <li>
+              <strong>03. Test & Improve</strong>
+              <span>Check quality, usability, performance, edge cases, and deployment readiness.</span>
+            </li>
+            <li>
+              <strong>04. Launch & Support</strong>
+              <span>Ship confidently and support the product as requirements evolve.</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section split-section" id="systems">
         <div>
-          <p class="eyebrow">Process</p>
-          <h2>Clarity first. Then design, build, test, and ship.</h2>
-          <p>You do not need a perfect specification. Bring the requirement, current workflow, or rough idea. We convert it into a practical build path.</p>
+          <p class="eyebrow">Best Fit</p>
+          <h2>Products Built Around Your Business</h2>
+          <p class="section-copy">KJR Labs is for founders, teams, and businesses that need working digital systems instead of decoration.</p>
         </div>
-        <ol class="process-list">
-          <li><strong>01 / Map</strong><span>Understand users, data, workflows, and the exact outcome required.</span></li>
-          <li><strong>02 / Shape</strong><span>Define the first version, screens, actions, and technical direction.</span></li>
-          <li><strong>03 / Build</strong><span>Implement the product, website, extension, dashboard, or automation.</span></li>
-          <li><strong>04 / Ship</strong><span>Test, polish, deploy, and prepare the next improvement cycle.</span></li>
-        </ol>
-      </div>
-    </section>
+        <a class="button tiny" href="mailto:kjrlabs9@gmail.com">See If We Fit</a>
+        <div class="system-row">
+          <article>
+            <div class="wave-chart" aria-hidden="true"></div>
+            <span>Founders</span>
+            <strong>MVPs & launch systems</strong>
+          </article>
+          <article>
+            <div class="radar-chart" aria-hidden="true"></div>
+            <span>Businesses</span>
+            <strong>Dashboards & portals</strong>
+          </article>
+          <article>
+            <div class="line-chart" aria-hidden="true"></div>
+            <span>Teams</span>
+            <strong>Automation & tools</strong>
+          </article>
+        </div>
+      </section>
 
-    <section class="section" id="systems">
-      <div class="container systems-grid">
-        <div class="system-card large">
-          <p class="eyebrow">Best fit</p>
-          <h2>For customers who need a working digital system, not just decoration.</h2>
+      <section class="section centered plans">
+        <p class="eyebrow">Engagements</p>
+        <h2>Simple, Transparent Build Paths</h2>
+        <p class="section-copy">Every project is scoped to your requirement. These are common starting points for planning the first conversation.</p>
+        <div class="plan-grid">
+          <article>
+            <h3>Starter Build</h3>
+            <p>Best for websites, landing pages, extension utilities, and small internal tools.</p>
+            <strong>Focused first version</strong>
+            <ul>
+              <li>Requirement mapping</li>
+              <li>Responsive design</li>
+              <li>Frontend or basic backend setup</li>
+              <li>Performance and SEO basics</li>
+              <li>Launch handoff</li>
+            </ul>
+            <a href="mailto:kjrlabs9@gmail.com?subject=Starter%20build%20for%20KJR%20Labs">Get Started</a>
+          </article>
+          <article>
+            <h3>Growth Build</h3>
+            <p>Best for full web apps, dashboards, portals, automation systems, and product workflows.</p>
+            <strong>Custom product scope</strong>
+            <ul>
+              <li>UX and architecture planning</li>
+              <li>Custom UI and product logic</li>
+              <li>API or database integration</li>
+              <li>Testing and deployment setup</li>
+              <li>Improvement support</li>
+            </ul>
+            <a href="mailto:kjrlabs9@gmail.com?subject=Growth%20build%20for%20KJR%20Labs">Get Started</a>
+          </article>
         </div>
-        <div class="system-card">
-          <span>Founders</span>
-          <p>MVPs, launch pages, internal tools, experiments, and product utilities.</p>
-        </div>
-        <div class="system-card">
-          <span>Businesses</span>
-          <p>Websites, dashboards, automation, portals, and software around existing operations.</p>
-        </div>
-        <div class="system-card">
-          <span>Teams</span>
-          <p>Repeatable workflows, browser helpers, reporting systems, and admin tooling.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="contact-section" id="contact">
-      <div class="container contact-card">
+      <section class="contact-section" id="contact">
         <p class="eyebrow">Contact</p>
-        <h2>Send the requirement. We will shape the build.</h2>
-        <p>Tell us what you want to build, who will use it, and what the first working version should do.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="mailto:kjrlabs9@gmail.com?subject=Project%20brief%20for%20KJR%20Labs&body=Hi%20KJR%20Labs%2C%0A%0AI%20want%20to%20build%3A%0A%0AWho%20will%20use%20it%3A%0A%0AWhat%20should%20it%20do%3A%0A%0ATimeline%20or%20budget%20range%3A%0A%0AReferences%3A%0A">Email the brief</a>
-          <a class="button secondary" href="mailto:kjrlabs9@gmail.com">kjrlabs9@gmail.com</a>
-        </div>
-      </div>
-    </section>
-  </main>
+        <h2>Tell Us What You Need To Build</h2>
+        <p>Send the requirement, user type, timeline, references, and what the first working version should do.</p>
+        <a class="button light" href="mailto:kjrlabs9@gmail.com?subject=Project%20brief%20for%20KJR%20Labs&body=Hi%20KJR%20Labs%2C%0A%0AI%20want%20to%20build%3A%0A%0AWho%20will%20use%20it%3A%0A%0AWhat%20should%20it%20do%3A%0A%0ATimeline%20or%20budget%20range%3A%0A%0AReferences%3A%0A">Email The Brief</a>
+      </section>
+    </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
+    <footer class="site-footer">
       <a class="brand footer-brand" href="#top">
-        <img src="images/logo-kjr-labs.png" alt="" width="36" height="36">
+        <img src="images/logo-kjr-labs.png" alt="" width="30" height="30">
         <span>KJR Labs</span>
       </a>
       <span>Vadodara, Gujarat, India</span>
       <a href="terms.html">Terms</a>
       <a href="privacy-policy.html">Privacy</a>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="js/site.js"></script>
 </body>
