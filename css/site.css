@@ -689,15 +689,181 @@ h3 {
   margin: 16px auto 30px;
 }
 
-.site-footer {
+.faq-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(460px, 1fr);
+  gap: clamp(34px, 7vw, 110px);
+  align-items: start;
+}
+
+.faq-head {
+  position: sticky;
+  top: 96px;
+}
+
+.faq-head p:last-child {
+  max-width: 430px;
+  margin-top: 18px;
+  color: var(--rust-700);
+  text-transform: capitalize;
+}
+
+.faq-list {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+
+.faq-list details {
+  border-bottom: 1px solid var(--line);
+  padding: 0;
+}
+
+.faq-list summary {
+  min-height: 76px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 24px 26px 32px;
-  color: var(--rust-700);
-  font-size: 0.85rem;
+  color: var(--rust-900);
+  font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+  line-height: 1.25;
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  color: var(--rust-600);
+}
+
+.faq-list details[open] summary::after {
+  content: "-";
+}
+
+.faq-list p {
+  max-width: 680px;
+  padding: 0 52px 24px 0;
+  color: var(--charcoal);
+  font-size: 0.94rem;
+}
+
+.site-footer {
+  padding: 0 26px 26px;
+  background: var(--paper);
+  color: var(--paper);
+}
+
+.footer-frame {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(520px, 55vw, 760px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--rust-700);
+  padding: clamp(34px, 4vw, 58px);
+}
+
+.footer-frame::before,
+.footer-frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(18px, 3vw, 42px);
+  background: var(--paper);
+  opacity: 0.98;
+}
+
+.footer-frame::before {
+  left: 0;
+}
+
+.footer-frame::after {
+  right: 0;
+}
+
+.footer-columns {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.2fr 0.72fr 0.9fr 0.8fr;
+  gap: clamp(26px, 5vw, 88px);
+  padding-inline: clamp(16px, 5vw, 72px);
+}
+
+.footer-columns h2 {
+  margin: 0 0 24px;
+  color: var(--sand);
+  font-size: clamp(0.9rem, 1.1vw, 1.04rem);
+  line-height: 1;
+}
+
+.footer-columns a {
+  width: fit-content;
+  display: block;
+  margin-top: 8px;
+  color: rgba(255, 253, 252, 0.72);
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  text-transform: capitalize;
+}
+
+.footer-columns a::before {
+  content: "-";
+  margin-right: 8px;
+}
+
+.footer-columns a:hover {
+  color: var(--paper);
+}
+
+.social-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 78px;
+}
+
+.social-row a {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  background: rgba(255, 253, 252, 0.09);
+  color: var(--paper);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.social-row a::before {
+  content: none;
+}
+
+.footer-wordmark {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: clamp(60px, 10vw, 140px) clamp(8px, 5vw, 58px) 0;
+  border: solid var(--paper);
+  border-width: 0 0 9px 9px;
+  color: var(--paper);
+  font-family: Satoshi, Inter, sans-serif;
+  font-size: clamp(4.8rem, 17.4vw, 16.5rem);
+  font-weight: 800;
+  line-height: 0.8;
+  letter-spacing: 0;
+  white-space: nowrap;
 }
 
 .footer-brand {
@@ -756,8 +922,13 @@ h3 {
 
   .hero,
   .timeline,
-  .split-section {
+  .split-section,
+  .faq-section {
     grid-template-columns: 1fr;
+  }
+
+  .faq-head {
+    position: static;
   }
 
   .hero-actions {
@@ -769,6 +940,10 @@ h3 {
   .plan-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .footer-columns {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 760px) {
@@ -778,19 +953,21 @@ h3 {
   }
 
   .site-header {
-    padding: 14px 14px 0;
+    padding: 12px 12px 0;
   }
 
   .nav {
     grid-template-columns: 1fr auto;
+    min-height: 50px;
+    padding: 0 12px;
   }
 
   .nav-left,
   .nav-links {
     position: fixed;
-    left: 16px;
-    right: 16px;
-    top: 76px;
+    left: 12px;
+    right: 12px;
+    top: 68px;
     z-index: 50;
     display: none;
     flex-direction: column;
@@ -816,7 +993,7 @@ h3 {
   }
 
   body.nav-open .nav-links {
-    top: 216px;
+    top: 212px;
   }
 
   .brand {
@@ -829,15 +1006,18 @@ h3 {
 
   .hero {
     min-height: auto;
-    padding-inline: 14px;
+    gap: 28px;
+    padding: 54px 12px 42px;
   }
 
   h1 {
-    font-size: clamp(2.82rem, 15vw, 4.5rem);
+    font-size: clamp(2.5rem, 13.2vw, 4.2rem);
+    overflow-wrap: anywhere;
   }
 
   h2 {
-    font-size: clamp(2.15rem, 12vw, 3.6rem);
+    font-size: clamp(2rem, 10.8vw, 3.35rem);
+    overflow-wrap: anywhere;
   }
 
   .intro-panels,
@@ -849,8 +1029,9 @@ h3 {
 
   .intro-panels,
   .section,
-  .contact-section {
-    padding-inline: 14px;
+  .contact-section,
+  .site-footer {
+    padding-inline: 12px;
   }
 
   .intro-card {
@@ -868,7 +1049,7 @@ h3 {
 
   .media-strip,
   .contact-section {
-    margin-inline: 14px;
+    margin-inline: 12px;
   }
 
   .media-strip {
@@ -881,5 +1062,44 @@ h3 {
 
   .timeline li::before {
     left: -23px;
+  }
+
+  .faq-list summary {
+    min-height: 70px;
+  }
+
+  .faq-list p {
+    padding-right: 0;
+  }
+
+  .footer-frame {
+    min-height: auto;
+    padding: 30px 22px 36px;
+  }
+
+  .footer-frame::before,
+  .footer-frame::after {
+    width: 12px;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding-inline: 12px;
+  }
+
+  .footer-columns h2 {
+    margin-bottom: 14px;
+  }
+
+  .social-row {
+    margin-top: 28px;
+  }
+
+  .footer-wordmark {
+    margin: 56px 10px 0;
+    border-width: 0 0 5px 5px;
+    font-size: clamp(3.15rem, 19vw, 5.4rem);
+    white-space: normal;
   }
 }
