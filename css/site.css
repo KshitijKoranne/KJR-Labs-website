@@ -253,13 +253,16 @@ h3 {
   color: var(--rust-900);
   padding: 0 18px;
   font-size: 0.98rem;
-  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+  box-shadow: 0 0 0 rgba(16, 8, 6, 0);
+  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .button:hover {
-  background: var(--rust-500);
+  border-color: var(--rust-950);
+  background: var(--rust-950);
   color: var(--paper);
-  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(16, 8, 6, 0.16);
+  transform: translateY(-3px);
 }
 
 .button.ghost,
@@ -267,10 +270,22 @@ h3 {
   background: transparent;
 }
 
+.button.ghost:hover,
+.button.tiny:hover {
+  background: var(--rust-950);
+  color: var(--paper);
+}
+
 .button.light {
   border-color: rgba(255, 253, 252, 0.54);
   background: var(--paper);
   color: var(--rust-900);
+}
+
+.button.light:hover {
+  border-color: var(--paper);
+  background: var(--paper);
+  color: var(--rust-950);
 }
 
 .intro-panels {
@@ -289,6 +304,12 @@ h3 {
   background: var(--rust-500);
   color: var(--paper);
   padding: clamp(26px, 3vw, 42px);
+  transition: background 220ms ease, transform 220ms ease;
+}
+
+.intro-card:hover {
+  background: var(--rust-700);
+  transform: translateY(-4px);
 }
 
 .intro-card p {
@@ -377,6 +398,12 @@ h3 {
   object-fit: cover;
   filter: sepia(0.85) saturate(1.35) hue-rotate(330deg) contrast(1.08) brightness(0.78);
   mix-blend-mode: luminosity;
+  transition: filter 260ms ease, transform 420ms ease;
+}
+
+.media-strip:hover img {
+  filter: sepia(0.8) saturate(1.45) hue-rotate(330deg) contrast(1.12) brightness(0.86);
+  transform: scale(1.025);
 }
 
 .media-strip::after {
@@ -438,6 +465,12 @@ h3 {
   border-right: 1px solid var(--line);
   padding: 26px;
   text-align: left;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.service-grid article:hover {
+  background: var(--paper-soft);
+  transform: translateY(-4px);
 }
 
 .service-grid article:last-child {
@@ -506,6 +539,12 @@ h3 {
   position: relative;
   padding: 22px 28px;
   background: rgba(255, 253, 252, 0.08);
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.timeline li:hover {
+  background: rgba(255, 253, 252, 0.12);
+  transform: translateX(4px);
 }
 
 .timeline li::before {
@@ -563,6 +602,13 @@ h3 {
   min-height: 220px;
   border: 1px solid rgba(104, 15, 0, 0.12);
   background: var(--paper-soft);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.system-row article:hover {
+  border-color: var(--line);
+  box-shadow: 0 18px 38px rgba(16, 8, 6, 0.08);
+  transform: translateY(-5px);
 }
 
 .system-row div {
@@ -629,6 +675,14 @@ h3 {
     var(--rust-500);
   color: var(--paper);
   padding: clamp(28px, 3.4vw, 46px);
+  transition: background 220ms ease, transform 220ms ease;
+}
+
+.plan-grid article:hover {
+  background:
+    radial-gradient(circle, rgba(255, 253, 252, 0.22) 1px, transparent 2px) right 26px top 20px / 14px 14px no-repeat,
+    var(--rust-700);
+  transform: translateY(-5px);
 }
 
 .plan-grid p {
@@ -663,6 +717,13 @@ h3 {
   margin-top: auto;
   border: 1px solid rgba(255, 253, 252, 0.36);
   font-size: 0.78rem;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.plan-grid a:hover {
+  background: var(--paper);
+  color: var(--rust-950);
+  transform: translateY(-2px);
 }
 
 .plan-grid article:nth-child(2) a {
@@ -819,6 +880,12 @@ h3 {
   line-height: 1.25;
   list-style: none;
   cursor: pointer;
+  transition: color 160ms ease, padding-left 160ms ease;
+}
+
+.faq-list summary:hover {
+  color: var(--rust-500);
+  padding-left: 8px;
 }
 
 .faq-list summary::-webkit-details-marker {
@@ -861,6 +928,7 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   background: var(--rust-700);
+  border-bottom: clamp(10px, 1vw, 16px) solid var(--paper);
   padding: clamp(34px, 4vw, 58px);
 }
 
@@ -934,6 +1002,12 @@ h3 {
   color: var(--paper);
   font-size: 0.78rem;
   text-transform: uppercase;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.social-row a:hover {
+  background: rgba(255, 253, 252, 0.18);
+  transform: translateY(-3px);
 }
 
 .social-row a::before {
@@ -945,8 +1019,6 @@ h3 {
   z-index: 1;
   display: block;
   margin: clamp(60px, 10vw, 140px) clamp(8px, 5vw, 58px) 0;
-  border: solid var(--paper);
-  border-width: 0 0 9px 9px;
   color: var(--paper);
   font-family: Satoshi, Inter, sans-serif;
   font-size: clamp(4.8rem, 17.4vw, 16.5rem);
@@ -954,6 +1026,11 @@ h3 {
   line-height: 0.8;
   letter-spacing: 0;
   white-space: nowrap;
+  transition: transform 220ms ease;
+}
+
+.footer-wordmark:hover {
+  transform: translateY(-4px);
 }
 
 .footer-brand {
@@ -1204,7 +1281,6 @@ h3 {
 
   .footer-wordmark {
     margin: 56px 10px 0;
-    border-width: 0 0 5px 5px;
     font-size: clamp(3.15rem, 19vw, 5.4rem);
     white-space: normal;
   }
