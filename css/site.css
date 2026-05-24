@@ -146,11 +146,10 @@ img {
 }
 
 .brand img {
-  width: 26px;
-  height: 26px;
+  width: 34px;
+  height: 34px;
   border-radius: 0;
-  filter: brightness(0) invert(1);
-  opacity: 0.92;
+  object-fit: contain;
 }
 
 .nav-toggle {
@@ -689,6 +688,97 @@ h3 {
   margin: 16px auto 30px;
 }
 
+.subpage-hero {
+  position: relative;
+  padding: clamp(70px, 8vw, 128px) 26px clamp(48px, 6vw, 86px);
+  border-bottom: 1px solid rgba(104, 15, 0, 0.14);
+  background:
+    linear-gradient(120deg, rgba(104, 15, 0, 0.08) 1px, transparent 1px),
+    var(--paper);
+  background-size: 142px 82px;
+}
+
+.subpage-hero h1 {
+  max-width: 1080px;
+  font-size: clamp(3rem, 6.6vw, 7.4rem);
+}
+
+.subpage-hero p:not(.eyebrow) {
+  max-width: 760px;
+  margin-top: 24px;
+  color: var(--rust-700);
+  font-size: clamp(0.95rem, 1.2vw, 1.14rem);
+  text-transform: capitalize;
+}
+
+.subpage-grid,
+.legal-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(460px, 1fr);
+  gap: clamp(24px, 5vw, 84px);
+  padding: clamp(52px, 7vw, 104px) 26px;
+}
+
+.subpage-panel,
+.legal-layout aside,
+.legal-copy section {
+  border: 1px solid var(--line);
+  background: rgba(255, 253, 252, 0.78);
+}
+
+.subpage-panel,
+.legal-layout aside {
+  padding: clamp(26px, 3.2vw, 44px);
+}
+
+.contact-panel {
+  background: var(--rust-500);
+  color: var(--paper);
+}
+
+.subpage-panel h2,
+.legal-layout aside h2 {
+  font-size: clamp(1.65rem, 2.8vw, 3.4rem);
+}
+
+.subpage-panel p,
+.legal-layout aside p {
+  margin-top: 16px;
+  color: var(--charcoal);
+  text-transform: capitalize;
+}
+
+.contact-panel p {
+  color: rgba(255, 253, 252, 0.76);
+}
+
+.subpage-panel .button,
+.legal-layout aside .button {
+  width: fit-content;
+  margin-top: 30px;
+}
+
+.subpage-panel ul {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0 0;
+  padding-left: 18px;
+  color: var(--charcoal);
+}
+
+.legal-layout aside {
+  height: fit-content;
+  position: sticky;
+  top: 96px;
+  background: var(--rust-500);
+  color: var(--paper);
+}
+
+.legal-layout aside .eyebrow,
+.legal-layout aside p {
+  color: rgba(255, 253, 252, 0.74);
+}
+
 .faq-section {
   display: grid;
   grid-template-columns: minmax(0, 0.7fr) minmax(460px, 1fr);
@@ -901,17 +991,27 @@ h3 {
 
 .legal-copy {
   display: grid;
-  gap: 18px;
-  margin-top: 26px;
+  gap: 14px;
+  margin-top: 0;
 }
 
 .legal-copy h2 {
-  font-size: 1.35rem;
+  font-size: clamp(1.25rem, 1.8vw, 1.7rem);
   line-height: 1.2;
 }
 
+.legal-copy section {
+  padding: clamp(20px, 2.4vw, 32px);
+}
+
 .legal-copy p {
-  margin-top: 8px;
+  margin-top: 12px;
+  color: var(--charcoal);
+}
+
+.legal-copy a {
+  color: var(--rust-900);
+  font-weight: 800;
 }
 
 @media (max-width: 900px) {
@@ -923,11 +1023,14 @@ h3 {
   .hero,
   .timeline,
   .split-section,
-  .faq-section {
+  .faq-section,
+  .subpage-grid,
+  .legal-layout {
     grid-template-columns: 1fr;
   }
 
-  .faq-head {
+  .faq-head,
+  .legal-layout aside {
     position: static;
   }
 
@@ -1030,7 +1133,10 @@ h3 {
   .intro-panels,
   .section,
   .contact-section,
-  .site-footer {
+  .site-footer,
+  .subpage-hero,
+  .subpage-grid,
+  .legal-layout {
     padding-inline: 12px;
   }
 
