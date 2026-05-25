@@ -456,6 +456,26 @@ h3 {
   font-size: 0.86rem;
 }
 
+.section-cta {
+  max-width: 920px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  margin: 34px auto 0;
+  border: 1px solid var(--line);
+  background: var(--paper-soft);
+  padding: 18px;
+  text-align: left;
+}
+
+.section-cta p {
+  max-width: 600px;
+  color: var(--charcoal);
+  font-size: 0.92rem;
+  text-transform: capitalize;
+}
+
 .rust-band {
   background: var(--rust-500);
   color: var(--paper);
@@ -534,6 +554,29 @@ h3 {
   margin-top: 8px;
   color: rgba(255, 253, 252, 0.72);
   font-size: 0.82rem;
+  text-transform: capitalize;
+}
+
+.process-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 0.44fr) minmax(0, 1fr) auto;
+  gap: 22px;
+  align-items: center;
+  margin-top: 44px;
+  border: 1px solid rgba(255, 253, 252, 0.18);
+  background: rgba(255, 253, 252, 0.08);
+  padding: 20px;
+}
+
+.process-cta strong {
+  color: var(--paper);
+  font-size: clamp(1.12rem, 1.6vw, 1.45rem);
+  font-weight: 400;
+}
+
+.process-cta span {
+  color: rgba(255, 253, 252, 0.74);
+  font-size: 0.88rem;
   text-transform: capitalize;
 }
 
@@ -816,11 +859,16 @@ h3 {
   top: 96px;
 }
 
-.faq-head p:last-child {
+.faq-head p:not(.eyebrow) {
   max-width: 430px;
   margin-top: 18px;
   color: var(--rust-700);
   text-transform: capitalize;
+}
+
+.faq-head .button {
+  width: fit-content;
+  margin-top: 24px;
 }
 
 .faq-list {
@@ -876,6 +924,11 @@ h3 {
   padding: 0 52px 24px 0;
   color: var(--charcoal);
   font-size: 0.94rem;
+}
+
+.faq-list p a {
+  color: var(--rust-900);
+  font-weight: 800;
 }
 
 .site-footer {
@@ -1085,6 +1138,11 @@ h3 {
     grid-template-columns: 1fr 1fr;
   }
 
+  .process-cta {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
   .footer-columns {
     grid-template-columns: 1fr 1fr;
   }
@@ -1192,6 +1250,16 @@ h3 {
 
   .service-grid article:nth-child(3) {
     border-bottom: 1px solid var(--line);
+  }
+
+  .section-cta {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .section-cta .button,
+  .process-cta .button {
+    width: 100%;
   }
 
   .media-strip,
