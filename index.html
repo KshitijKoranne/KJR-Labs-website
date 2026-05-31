@@ -21,7 +21,7 @@
   <link rel="shortcut icon" href="images/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="manifest" href="images/site.webmanifest">
-  <link rel="stylesheet" href="css/site.css?v=20260524b">
+  <link rel="stylesheet" href="css/site.css?v=20260531a">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -60,7 +60,7 @@
           <span>KJR Labs</span>
         </a>
 
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
           <span></span>
           <span></span>
           <span></span>
@@ -85,7 +85,7 @@
         </div>
         <div class="hero-actions">
           <a class="button ghost" href="#services">See What We Build</a>
-          <a class="button" href="mailto:kjrlabs9@gmail.com?subject=Project%20brief%20for%20KJR%20Labs&body=Hi%20KJR%20Labs%2C%0A%0AI%20want%20to%20build%3A%0A%0AWho%20will%20use%20it%3A%0A%0AWhat%20should%20it%20do%3A%0A%0ATimeline%20or%20budget%20range%3A%0A%0AReferences%3A%0A">Send A Brief</a>
+          <a class="button" href="contact.html#lead-form">Send A Brief</a>
         </div>
       </section>
 
@@ -136,7 +136,7 @@
         </div>
         <div class="section-cta">
           <p>Not sure which service fits? Send the problem and we will point you to the shortest practical build path.</p>
-          <a class="button tiny" href="mailto:kjrlabs9@gmail.com?subject=Need%20help%20choosing%20a%20KJR%20Labs%20build%20path&body=Hi%20KJR%20Labs%2C%0A%0AI%20am%20not%20sure%20which%20service%20fits.%20Here%20is%20the%20problem%3A%0A%0AWhat%20I%20want%20to%20improve%3A%0A%0ATimeline%3A%0A%0AReferences%3A%0A">Find The Right Build</a>
+          <a class="button tiny" href="contact.html#lead-form">Find The Right Build</a>
         </div>
       </section>
 
@@ -169,7 +169,7 @@
         <div class="process-cta">
           <strong>Have a requirement already?</strong>
           <span>Send the brief now and we will respond with the next practical step.</span>
-          <a class="button light" href="mailto:kjrlabs9@gmail.com?subject=Ready%20requirement%20for%20KJR%20Labs&body=Hi%20KJR%20Labs%2C%0A%0AI%20have%20a%20requirement%20ready.%0A%0AProject%20summary%3A%0A%0AMust-have%20features%3A%0A%0ATimeline%3A%0A%0ABudget%20range%20if%20decided%3A%0A%0AReferences%3A%0A">Send The Requirement</a>
+          <a class="button light" href="contact.html#lead-form">Send The Requirement</a>
         </div>
       </section>
 
@@ -179,7 +179,7 @@
           <h2>Products Built Around Your Business</h2>
           <p class="section-copy">KJR Labs is for founders, teams, and businesses that need software to remove friction, improve follow-up, speed up work, or create a stronger digital presence.</p>
         </div>
-        <a class="button tiny" href="mailto:kjrlabs9@gmail.com">Check Fit</a>
+        <a class="button tiny" href="contact.html#lead-form">Check Fit</a>
         <div class="system-row">
           <article>
             <div class="wave-chart" aria-hidden="true"></div>
@@ -215,7 +215,7 @@
               <li>Performance, SEO, and analytics basics</li>
               <li>Deployment-ready handoff</li>
             </ul>
-            <a href="mailto:kjrlabs9@gmail.com?subject=Starter%20build%20for%20KJR%20Labs">Discuss Starter Build</a>
+            <a href="contact.html#lead-form">Discuss Starter Build</a>
           </article>
           <article>
             <h3>Growth Build</h3>
@@ -228,7 +228,7 @@
               <li>Testing, deployment, and release support</li>
               <li>Post-launch improvement planning</li>
             </ul>
-            <a href="mailto:kjrlabs9@gmail.com?subject=Growth%20build%20for%20KJR%20Labs">Discuss Growth Build</a>
+            <a href="contact.html#lead-form">Discuss Growth Build</a>
           </article>
         </div>
       </section>
@@ -237,7 +237,38 @@
         <p class="eyebrow">Contact</p>
         <h2>Tell Us What You Want To Improve</h2>
         <p>Send the requirement, current problem, target users, timeline, and any reference you like. We will reply with a practical next step.</p>
-        <a class="button light" href="mailto:kjrlabs9@gmail.com?subject=Project%20brief%20for%20KJR%20Labs&body=Hi%20KJR%20Labs%2C%0A%0AI%20want%20to%20build%20or%20improve%3A%0A%0AThe%20main%20problem%20is%3A%0A%0AWho%20will%20use%20it%3A%0A%0AWhat%20should%20the%20first%20version%20do%3A%0A%0ATimeline%20or%20budget%20range%3A%0A%0AReferences%3A%0A">Send Your Requirement</a>
+        <form class="lead-form lead-form-dark" action="https://formsubmit.co/kjrlabs9@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New KJR Labs project inquiry">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://www.kjrlabs.in/thank-you.html">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="honeypot">
+          <label>
+            <span>Name</span>
+            <input name="name" type="text" autocomplete="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <label>
+            <span>What do you need?</span>
+            <select name="project_type" required>
+              <option value="">Select one</option>
+              <option>Website or landing page</option>
+              <option>Custom software or dashboard</option>
+              <option>Chrome extension</option>
+              <option>Automation system</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+          <label>
+            <span>Requirement</span>
+            <textarea name="message" rows="5" placeholder="Tell us what you want to build or improve." required></textarea>
+          </label>
+          <button class="button light" type="submit">Send Requirement</button>
+          <p class="form-fallback">Prefer email? <a href="mailto:kjrlabs9@gmail.com?subject=Project%20brief%20for%20KJR%20Labs">kjrlabs9@gmail.com</a></p>
+        </form>
       </section>
 
       <section class="section faq-section" id="faq">
@@ -245,7 +276,7 @@
           <p class="eyebrow">FAQ</p>
           <h2>Questions Before You Start</h2>
           <p>Clear answers to the questions that usually come up before starting a software build.</p>
-          <a class="button tiny" href="mailto:kjrlabs9@gmail.com?subject=Question%20before%20starting%20a%20KJR%20Labs%20project">Ask A Question</a>
+          <a class="button tiny" href="contact.html#lead-form">Ask A Question</a>
         </div>
         <div class="faq-list">
           <details open>
@@ -290,7 +321,7 @@
           </details>
           <details>
             <summary>How do we start?</summary>
-            <p>Email <a href="mailto:kjrlabs9@gmail.com">kjrlabs9@gmail.com</a> with the requirement. We will review it and reply with the next practical step.</p>
+            <p>Use the contact form or email <a href="mailto:kjrlabs9@gmail.com">kjrlabs9@gmail.com</a> with the requirement. We will review it and reply with the next practical step.</p>
           </details>
         </div>
       </section>
@@ -326,7 +357,7 @@
           <div>
             <h2>Contact Us</h2>
             <a href="mailto:kjrlabs9@gmail.com">Email Us</a>
-            <a href="contact.html">Send A Brief</a>
+            <a href="contact.html#lead-form">Send A Brief</a>
             <a href="terms.html">Terms</a>
             <a href="privacy-policy.html">Privacy</a>
           </div>

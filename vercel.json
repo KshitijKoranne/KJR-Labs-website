@@ -4,6 +4,7 @@
   "rewrites": [
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/privacy", "destination": "/privacy-policy.html" },
+    { "source": "/thank-you", "destination": "/thank-you.html" },
     { "source": "/terms", "destination": "/terms.html" },
     { "source": "/privacy-policy", "destination": "/privacy-policy.html" }
   ]

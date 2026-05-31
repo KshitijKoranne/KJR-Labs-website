@@ -21,7 +21,7 @@
   <link rel="shortcut icon" href="images/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="manifest" href="images/site.webmanifest">
-  <link rel="stylesheet" href="css/site.css?v=20260524b">
+  <link rel="stylesheet" href="css/site.css?v=20260531a">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -39,7 +39,7 @@
           <img src="images/logo-kjr-labs.png?v=20260524" alt="" width="30" height="30">
           <span>KJR Labs</span>
         </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
           <span></span>
           <span></span>
           <span></span>
@@ -49,7 +49,7 @@
           <span></span>
           <a href="index.html#faq">FAQ</a>
           <span></span>
-          <a href="contact.html">Start A Build</a>
+          <a href="contact.html#lead-form">Start A Build</a>
         </div>
       </nav>
     </header>
@@ -57,25 +57,61 @@
     <main id="main">
       <section class="subpage-hero">
         <p class="eyebrow">Contact</p>
-        <h1>Send The Requirement. We Will Shape The Next Step.</h1>
-        <p>Share what you want to build or improve, who will use it, and what the first useful version should do.</p>
+        <h1>Tell Us About The Build You Need.</h1>
+        <p>Share the goal, timeline, and must-have details. We will reply with the best next step.</p>
       </section>
 
-      <section class="subpage-grid">
+      <section class="subpage-grid contact-grid" id="lead-form">
         <article class="subpage-panel contact-panel">
-          <h2>Email The Brief</h2>
-          <p>The fastest way to start is a short email with the problem, target users, timeline, and any references.</p>
-          <a class="button light" href="mailto:kjrlabs9@gmail.com?subject=Project%20brief%20for%20KJR%20Labs&body=Hi%20KJR%20Labs%2C%0A%0AI%20want%20to%20build%20or%20improve%3A%0A%0AThe%20main%20problem%20is%3A%0A%0AWho%20will%20use%20it%3A%0A%0AWhat%20should%20the%20first%20version%20do%3A%0A%0ATimeline%20or%20budget%20range%3A%0A%0AReferences%3A%0A">kjrlabs9@gmail.com</a>
+          <h2>Start With A Short Brief</h2>
+          <p>Use the form and we will get the message at kjrlabs9@gmail.com. Direct email is still available if you prefer it.</p>
+          <a class="button light" href="mailto:kjrlabs9@gmail.com?subject=Project%20brief%20for%20KJR%20Labs">Email Instead</a>
         </article>
-        <article class="subpage-panel">
-          <h2>Good Context To Send</h2>
-          <ul>
-            <li>What you want to build or improve</li>
-            <li>The main user or business problem</li>
-            <li>Must-have features for the first version</li>
-            <li>Timeline, budget range, or launch pressure</li>
-            <li>Reference websites, apps, or screenshots</li>
-          </ul>
+        <article class="subpage-panel form-panel">
+          <h2>Project Inquiry</h2>
+          <form class="lead-form" action="https://formsubmit.co/kjrlabs9@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New KJR Labs project inquiry">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://www.kjrlabs.in/thank-you.html">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="honeypot">
+            <div class="form-row">
+              <label>
+                <span>Name</span>
+                <input name="name" type="text" autocomplete="name" required>
+              </label>
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" autocomplete="email" required>
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                <span>Project type</span>
+                <select name="project_type" required>
+                  <option value="">Select one</option>
+                  <option>Website or landing page</option>
+                  <option>Custom software or dashboard</option>
+                  <option>Chrome extension</option>
+                  <option>Automation system</option>
+                  <option>Not sure yet</option>
+                </select>
+              </label>
+              <label>
+                <span>Timeline</span>
+                <input name="timeline" type="text" placeholder="Example: 2-4 weeks">
+              </label>
+            </div>
+            <label>
+              <span>Requirement</span>
+              <textarea name="message" rows="6" placeholder="What do you want to build or improve? Add must-have features, references, or current problems." required></textarea>
+            </label>
+            <label>
+              <span>Budget range, if decided</span>
+              <input name="budget" type="text" placeholder="Optional">
+            </label>
+            <button class="button" type="submit">Send Requirement</button>
+          </form>
         </article>
       </section>
     </main>
@@ -110,7 +146,7 @@
           <div>
             <h2>Contact Us</h2>
             <a href="mailto:kjrlabs9@gmail.com">Email Us</a>
-            <a href="contact.html">Send A Brief</a>
+            <a href="contact.html#lead-form">Send A Brief</a>
             <a href="terms.html">Terms</a>
             <a href="privacy-policy.html">Privacy</a>
           </div>
