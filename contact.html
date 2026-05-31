@@ -69,11 +69,8 @@
         </article>
         <article class="subpage-panel form-panel">
           <h2>Project Inquiry</h2>
-          <form class="lead-form" action="https://formsubmit.co/kjrlabs9@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New KJR Labs project inquiry">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://www.kjrlabs.in/thank-you.html">
+          <form class="lead-form" action="/api/contact" method="POST">
+            <input type="hidden" name="source_page" value="Contact page">
             <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="honeypot">
             <div class="form-row">
               <label>
@@ -111,6 +108,7 @@
               <input name="budget" type="text" placeholder="Optional">
             </label>
             <button class="button" type="submit">Send Requirement</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
           </form>
         </article>
       </section>

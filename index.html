@@ -237,11 +237,8 @@
         <p class="eyebrow">Contact</p>
         <h2>Tell Us What You Want To Improve</h2>
         <p>Send the requirement, current problem, target users, timeline, and any reference you like. We will reply with a practical next step.</p>
-        <form class="lead-form lead-form-dark" action="https://formsubmit.co/kjrlabs9@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New KJR Labs project inquiry">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://www.kjrlabs.in/thank-you.html">
+        <form class="lead-form lead-form-dark" action="/api/contact" method="POST">
+          <input type="hidden" name="source_page" value="Homepage contact section">
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="honeypot">
           <label>
             <span>Name</span>
@@ -267,6 +264,7 @@
             <textarea name="message" rows="5" placeholder="Tell us what you want to build or improve." required></textarea>
           </label>
           <button class="button light" type="submit">Send Requirement</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
           <p class="form-fallback">Prefer email? <a href="mailto:kjrlabs9@gmail.com?subject=Project%20brief%20for%20KJR%20Labs">kjrlabs9@gmail.com</a></p>
         </form>
       </section>
