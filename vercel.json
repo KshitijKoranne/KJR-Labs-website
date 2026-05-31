@@ -1,6 +1,17 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(favicon.ico|apple-touch-icon.png|images/favicon-16x16.png|images/favicon-32x32.png|images/favicon-96x96.png|images/favicon.ico|images/icon-192x192.png|images/icon-512x512.png|images/site.webmanifest)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
   "rewrites": [
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/privacy", "destination": "/privacy-policy.html" },
