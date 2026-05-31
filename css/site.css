@@ -691,33 +691,36 @@ h3 {
 .work-points span {
   border: 1px solid rgba(104, 15, 0, 0.14);
   background: var(--paper);
+  border-radius: 6px;
   padding: 10px 12px;
   color: var(--rust-900);
   font-size: 0.78rem;
 }
 
-.work-copy .button {
-  width: fit-content;
-  margin-top: 28px;
+.work-note {
+  max-width: 420px;
+  margin-top: 26px;
+  border-left: 2px solid rgba(104, 15, 0, 0.22);
+  padding-left: 14px;
+  color: var(--rust-700);
+  font-size: 0.84rem;
 }
 
 .work-preview {
   display: block;
-  border: 1px solid rgba(104, 15, 0, 0.16);
+  overflow: hidden;
+  border: 1px solid rgba(104, 15, 0, 0.12);
+  border-radius: 18px;
   background: var(--paper);
-  padding: 12px;
-  transition: transform 220ms ease, box-shadow 220ms ease;
-}
-
-.work-preview:hover {
-  box-shadow: 0 24px 54px rgba(16, 8, 6, 0.12);
-  transform: translateY(-4px);
+  box-shadow: 0 26px 70px rgba(16, 8, 6, 0.14);
+  padding: 10px;
 }
 
 .work-preview img {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
+  border-radius: 12px;
   object-fit: cover;
   object-position: top center;
 }
