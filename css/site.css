@@ -120,7 +120,6 @@ img {
 
 .nav a {
   font-size: clamp(0.72rem, 1.1vw, 0.95rem);
-  text-transform: capitalize;
 }
 
 .nav-left,
@@ -245,7 +244,6 @@ h3 {
   margin-top: 24px;
   color: var(--rust-700);
   font-size: clamp(0.92rem, 1.15vw, 1.12rem);
-  text-transform: capitalize;
 }
 
 .hero-actions {
@@ -329,7 +327,6 @@ h3 {
   max-width: 340px;
   color: rgba(255, 253, 252, 0.78);
   font-size: clamp(1rem, 1.3vw, 1.22rem);
-  text-transform: capitalize;
 }
 
 .intro-card strong {
@@ -416,7 +413,6 @@ h3 {
   margin: 16px auto 0;
   color: var(--rust-700);
   font-size: 0.95rem;
-  text-transform: capitalize;
 }
 
 .service-grid {
@@ -478,7 +474,6 @@ h3 {
   max-width: 600px;
   color: var(--charcoal);
   font-size: 0.92rem;
-  text-transform: capitalize;
 }
 
 .rust-band {
@@ -502,7 +497,6 @@ h3 {
   max-width: 620px;
   margin-top: 24px;
   color: rgba(255, 253, 252, 0.72);
-  text-transform: capitalize;
 }
 
 .timeline ol {
@@ -559,7 +553,6 @@ h3 {
   margin-top: 8px;
   color: rgba(255, 253, 252, 0.72);
   font-size: 0.82rem;
-  text-transform: capitalize;
 }
 
 .process-cta {
@@ -582,7 +575,6 @@ h3 {
 .process-cta span {
   color: rgba(255, 253, 252, 0.74);
   font-size: 0.88rem;
-  text-transform: capitalize;
 }
 
 .split-section {
@@ -978,7 +970,6 @@ h3 {
   max-width: 430px;
   margin-top: 18px;
   color: var(--rust-700);
-  text-transform: capitalize;
 }
 
 .faq-head .button {
@@ -1099,13 +1090,19 @@ h3 {
   line-height: 1;
 }
 
+.footer-note {
+  max-width: 320px;
+  color: rgba(255, 253, 252, 0.72);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
 .footer-columns a {
   width: fit-content;
   display: block;
   margin-top: 8px;
   color: rgba(255, 253, 252, 0.72);
   font-size: clamp(0.85rem, 1.1vw, 1rem);
-  text-transform: capitalize;
 }
 
 .footer-columns a::before {
@@ -1117,32 +1114,32 @@ h3 {
   color: var(--paper);
 }
 
-.social-row {
+.footer-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 78px;
+  margin-top: 24px;
 }
 
-.social-row a {
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
+.footer-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
   margin: 0;
+  border: 1px solid rgba(255, 253, 252, 0.18);
   background: rgba(255, 253, 252, 0.09);
+  padding: 0 14px;
   color: var(--paper);
-  font-size: 0.78rem;
-  text-transform: uppercase;
+  font-size: 0.84rem;
   transition: background 180ms ease, transform 180ms ease;
 }
 
-.social-row a:hover {
+.footer-actions a:hover {
   background: rgba(255, 253, 252, 0.18);
   transform: translateY(-3px);
 }
 
-.social-row a::before {
+.footer-actions a::before {
   content: none;
 }
 
@@ -1427,7 +1424,7 @@ h3 {
     margin-bottom: 14px;
   }
 
-  .social-row {
+  .footer-actions {
     margin-top: 28px;
   }
 
