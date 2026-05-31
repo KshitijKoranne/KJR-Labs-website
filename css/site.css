@@ -889,7 +889,6 @@ h3 {
   margin-top: 24px;
   color: var(--rust-700);
   font-size: clamp(0.95rem, 1.2vw, 1.14rem);
-  text-transform: capitalize;
 }
 
 .subpage-grid,
@@ -926,7 +925,6 @@ h3 {
 .legal-layout aside p {
   margin-top: 16px;
   color: var(--charcoal);
-  text-transform: capitalize;
 }
 
 .contact-panel p {
