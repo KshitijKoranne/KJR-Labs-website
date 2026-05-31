@@ -697,15 +697,6 @@ h3 {
   font-size: 0.78rem;
 }
 
-.work-note {
-  max-width: 420px;
-  margin-top: 26px;
-  border-left: 2px solid rgba(104, 15, 0, 0.22);
-  padding-left: 14px;
-  color: var(--rust-700);
-  font-size: 0.84rem;
-}
-
 .work-preview {
   display: block;
   overflow: hidden;
