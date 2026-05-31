@@ -658,6 +658,70 @@ h3 {
     repeating-radial-gradient(ellipse at 70% 54%, transparent 0 11px, rgba(176, 70, 34, 0.22) 12px 13px);
 }
 
+.work-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(420px, 1fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+  border-top: 1px solid rgba(104, 15, 0, 0.1);
+  background: var(--paper-soft);
+}
+
+.work-copy {
+  max-width: 520px;
+}
+
+.work-copy h2 {
+  font-size: clamp(2.2rem, 4vw, 4.9rem);
+}
+
+.work-copy p:not(.eyebrow) {
+  margin-top: 20px;
+  color: var(--rust-700);
+  font-size: 0.98rem;
+}
+
+.work-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.work-points span {
+  border: 1px solid rgba(104, 15, 0, 0.14);
+  background: var(--paper);
+  padding: 10px 12px;
+  color: var(--rust-900);
+  font-size: 0.78rem;
+}
+
+.work-copy .button {
+  width: fit-content;
+  margin-top: 28px;
+}
+
+.work-preview {
+  display: block;
+  border: 1px solid rgba(104, 15, 0, 0.16);
+  background: var(--paper);
+  padding: 12px;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.work-preview:hover {
+  box-shadow: 0 24px 54px rgba(16, 8, 6, 0.12);
+  transform: translateY(-4px);
+}
+
+.work-preview img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
+}
+
 .plans {
   padding-top: 48px;
 }
@@ -1229,6 +1293,7 @@ h3 {
   .hero,
   .timeline,
   .split-section,
+  .work-section,
   .faq-section,
   .subpage-grid,
   .legal-layout {
@@ -1337,6 +1402,7 @@ h3 {
   .intro-panels,
   .service-grid,
   .system-row,
+  .work-section,
   .plan-grid {
     grid-template-columns: 1fr;
   }
