@@ -1,22 +1,12 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/(favicon.ico|apple-touch-icon.png|images/favicon-16x16.png|images/favicon-32x32.png|images/favicon-96x96.png|images/favicon.ico|images/icon-192x192.png|images/icon-512x512.png|images/site.webmanifest)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    }
-  ],
-  "rewrites": [
-    { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/privacy", "destination": "/privacy-policy.html" },
-    { "source": "/thank-you", "destination": "/thank-you.html" },
-    { "source": "/terms", "destination": "/terms.html" },
-    { "source": "/privacy-policy", "destination": "/privacy-policy.html" }
+  "redirects": [
+    { "source": "/privacy-policy", "destination": "/privacy/", "permanent": true },
+    { "source": "/privacy-policy.html", "destination": "/privacy/", "permanent": true },
+    { "source": "/terms.html", "destination": "/terms/", "permanent": true },
+    { "source": "/contact", "destination": "/#contact", "permanent": true },
+    { "source": "/contact.html", "destination": "/#contact", "permanent": true },
+    { "source": "/thank-you", "destination": "/", "permanent": true },
+    { "source": "/thank-you.html", "destination": "/", "permanent": true },
+    { "source": "/world-time/privacy.html", "destination": "/world-time/privacy/", "permanent": true }
   ]
 }
