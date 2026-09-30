@@ -36,11 +36,6 @@
       "permanent": true
     },
     {
-      "source": "/world-time/privacy.html",
-      "destination": "/world-time/privacy/",
-      "permanent": true
-    },
-    {
       "source": "/privacy-policy/",
       "destination": "/privacy/",
       "permanent": true
