@@ -16,14 +16,15 @@ const serif = Instrument_Serif({ subsets: ["latin"], weight: "400", style: "ital
 const sans = Inter({ subsets: ["latin"], variable: "--f-sans", display: "swap", preload: false });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--f-mono", display: "swap", preload: false });
 
-const title = "KJR Labs | Software Studio for Web, Mobile & AI Apps — Vadodara, India";
-const description = "KJR Labs is an independent software studio in Vadodara, India, designing and building web apps, iOS and Android apps and AI tools for founders, small businesses and teams worldwide.";
+const title = "KJR Labs | Web, Mobile & AI Software Studio, Vadodara";
+const description = "KJR Labs is a software studio in Vadodara, India. We design and build web apps, iOS and Android apps and AI tools for founders and small businesses worldwide.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(brand.url),
   title: { default: title, template: "%s | KJR Labs" },
   description,
   alternates: { canonical: "/" },
+  icons: { icon: "/favicon.ico", apple: "/apple-touch-icon.png" },
   openGraph: { title, description, url: "/", siteName: brand.name, type: "website", locale: "en_IN" },
   twitter: { card: "summary_large_image", title, description, creator: "@kshitijkoranne" },
 };
@@ -36,6 +37,8 @@ const ld = {
   name: brand.name,
   description,
   url: brand.url,
+  image: `${brand.url}/opengraph-image`,
+  areaServed: "Worldwide",
   email: contact.email.value,
   telephone: contact.phone.tel,
   address: { "@type": "PostalAddress", addressLocality: "Vadodara", addressRegion: "Gujarat", addressCountry: "IN" },
@@ -49,7 +52,7 @@ const bootScript = `try{if(sessionStorage.getItem('booted')||matchMedia('(prefer
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${serif.variable} ${sans.variable} ${mono.variable}`} suppressHydrationWarning>
+    <html lang="en-IN" className={`${display.variable} ${serif.variable} ${sans.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
         <style dangerouslySetInnerHTML={{ __html: tokenCss }} />
         <Script id="boot" strategy="beforeInteractive">{bootScript}</Script>

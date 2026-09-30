@@ -4,5 +4,5 @@ import { brand, projects } from "@/content/site";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return ["/", "/privacy/", "/terms/", ...projects.map((p) => `/work/${p.slug}/`)].map((u) => ({ url: `${brand.url}${u}` }));
+  return ["/", "/privacy/", "/terms/", ...projects.map((p) => `/work/${p.slug}/`)].map((u) => ({ url: `${brand.url}${u}`, lastModified: new Date() }));
 }

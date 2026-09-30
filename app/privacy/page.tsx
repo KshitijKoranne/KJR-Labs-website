@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { contact } from "@/content/site";
 
-export const metadata: Metadata = { title: "Privacy", alternates: { canonical: "/privacy/" } };
+export const metadata: Metadata = { title: "Privacy", description: "KJR Labs privacy: no cookies, no analytics, no tracking scripts on this website.", alternates: { canonical: "/privacy/" } };
 
 export default function Privacy() {
   return (

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { contact } from "@/content/site";
 
-export const metadata: Metadata = { title: "Terms", alternates: { canonical: "/terms/" } };
+export const metadata: Metadata = { title: "Terms", description: "Terms for using the KJR Labs website and for early project conversations before a written agreement.", alternates: { canonical: "/terms/" } };
 
 const sections = [
   ["Scope", "These terms apply when you use this website or contact KJR Labs about a possible project. Paid client work should be covered by a written proposal, invoice, statement of work, or contract."],

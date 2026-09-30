@@ -9,7 +9,7 @@ export const brand = {
   descriptor: "Software and design studio",
   tagline: "We build software that actually ships.",
   taglines: ["Ideas in. Software out.", "Small studio. Serious software.", "Built in a lab. Shipped to the world."],
-  url: "https://kjrlabs.in",
+  url: "https://www.kjrlabs.in",
   since: { year: 2025 },
 };
 

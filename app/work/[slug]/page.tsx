@@ -12,7 +12,8 @@ type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const p = projects.find((x) => x.slug === slug)!;
-  return { title: p.name, description: p.tagline, alternates: { canonical: `/work/${p.slug}/` }, openGraph: { title: `${p.name} | KJR Labs`, description: p.tagline, url: `/work/${p.slug}/` } };
+  const img = [{ url: "/opengraph-image", width: 1200, height: 630, alt: "KJR Labs" }];
+  return { title: `${p.name} case study`, description: p.tagline, alternates: { canonical: `/work/${p.slug}/` }, openGraph: { title: `${p.name} case study | KJR Labs`, description: p.tagline, url: `/work/${p.slug}/`, type: "article", images: img }, twitter: { card: "summary_large_image", title: `${p.name} case study | KJR Labs`, description: p.tagline, images: ["/opengraph-image"] } };
 }
 
 export default async function Case({ params }: Props) {

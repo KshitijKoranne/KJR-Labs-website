@@ -13,7 +13,7 @@ export default function Makers() {
         </p>
         <div className="relative z-10 ml-[6%] aspect-[4/5] w-[82%] overflow-hidden rounded-sm">
           <div className="size-full transition-transform duration-[var(--t-slow)] ease-[var(--e-snappy)] group-hover:scale-105"><img src="/kshitij.jpg" alt={p.name} width={800} height={1000} className="size-full object-cover" /></div>
-          <p aria-hidden className="serif absolute right-3 top-4 z-20 max-w-[9em] rotate-[-6deg] text-right text-2xl leading-tight text-signal md:text-3xl">{p.note}</p>
+          <p aria-hidden className="serif absolute right-3 top-4 z-20 max-w-[9em] rotate-[-6deg] rounded-sm bg-bone px-3 py-2 text-right text-xl leading-tight text-ink shadow-[0_0_0_1.5px_var(--color-ink)] md:text-2xl">{p.note}</p>
         </div>
         <div className="relative z-10 max-w-[52ch] pb-2">
           <h3 className="display text-[clamp(2.2rem,4vw,3.6rem)] font-extrabold leading-none">{p.name}</h3>
