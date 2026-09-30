@@ -2,13 +2,13 @@
 import { useEffect, useRef, useState } from "react";
 import { projects } from "@/content/site";
 
-const places: Record<string, string> = { home: "/", work: "/#work", services: "/#services", about: "/#about", faq: "/#faq", contact: "/#contact", hire: "/#contact", lab: "/lab/", estimate: "/#estimate" };
+const places: Record<string, string> = { home: "/", work: "/#work", services: "/#services", about: "/#about", faq: "/#faq", contact: "/#contact", hire: "/#contact", estimate: "/#estimate" };
 const commands = ["help", "whoami", "ls projects", "hire", "ship", "clear", "sudo make me a sandwich", ...Object.keys(places).filter((k) => k !== "hire"), ...projects.map((p) => p.name)];
 
 function run(input: string): { out: string[]; go?: string } {
   const c = input.trim().toLowerCase();
   if (!c) return { out: [] };
-  if (c === "help") return { out: ["navigate: work · services · about · faq · contact · lab", "projects: type a project name, or `ls projects`", "fun: whoami · ship · hire · clear · sudo make me a sandwich"] };
+  if (c === "help") return { out: ["navigate: work · services · about · faq · contact", "projects: type a project name, or `ls projects`", "fun: whoami · ship · hire · clear · sudo make me a sandwich"] };
   if (c === "whoami") return { out: ["visitor@kjr-labs — probably a founder with a spreadsheet problem."] };
   if (c === "ls projects" || c === "ls") return { out: projects.map((p) => `${p.status.padEnd(11)} ${p.slug}`) };
   if (c === "ship") return { out: ["▍ building ... ok", "▍ testing .... ok", "▍ shipping ... done", "(That was the demo. Real shipping starts with a scope call: type `hire`.)"] };

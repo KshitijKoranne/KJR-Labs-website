@@ -117,7 +117,6 @@ export const projects: Project[] = [
 
 export const stats = [
   { value: 3, suffix: "", label: "products shipped" }, // ponytail: bump as apps ship
-  { value: 4, suffix: " weeks", label: "typical time to a first usable version", placeholder: true },
   { value: 100, suffix: "%", label: "code ownership handed to clients" },
   { value: 14, suffix: "+", label: "years in quality assurance, so we test everything" },
 ];
@@ -187,11 +186,9 @@ export const faqs = [
   { q: "I'm not technical. Can I still work with you?", a: "Yes. Most of our clients are not. We explain everything in plain words, show you working screens every week and never ask you to read code." },
   { q: "Who owns the code?", a: "You do. The code, the repositories, the hosting accounts and the domain are yours from day one." },
   { q: "Can you work with our existing designs or codebase?", a: "Yes. We start with a short review and tell you honestly what to keep and what to change." },
-  { q: "How do you use AI in your development process?", a: "AI helps us write and review code faster. A person reviews every change, and nothing ships without tests and a human sign-off." },
   { q: "What happens after launch?", a: "We hand over everything with documentation. If you want, we stay on a simple monthly care plan for fixes and updates." },
   { q: "Can you publish apps to the App Store and Google Play for us?", a: "Yes. We prepare the listings, screenshots and review notes and submit under your developer accounts." },
   { q: "Do you build software for regulated industries?", a: "Yes. Privacy, access control and audit trails are built in from day one, along with the documents your auditors will ask for." },
-  { q: "How fast can you start?", a: "Usually within one to two weeks of the scope call.", placeholder: true },
 ];
 
 export const ticker = {
@@ -226,14 +223,9 @@ export const stack = [
   { sym: "Gh", logo: "github", name: "GitHub", group: "Infra", use: "Code, reviews and releases, in your account." },
 ];
 
-export const labNotes = [
-  { date: "2026-09-18", title: "Deleted 40% of a component library", body: "We replaced a modal library with the native dialog element. The bundle dropped and the focus trap got better.", placeholder: true },
-];
-
 export const nav = [
   { label: "Work", href: "/#work" },
   { label: "Services", href: "/#services" },
-  { label: "Lab", href: "/lab/" },
   { label: "About", href: "/#about" },
   { label: "FAQ", href: "/#faq" },
 ];

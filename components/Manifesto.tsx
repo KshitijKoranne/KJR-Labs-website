@@ -81,7 +81,7 @@ export default function Manifesto() {
       <p className="relative mt-12 max-w-[52ch] text-lg leading-relaxed md:ml-[30%] md:text-xl">
         KJR Labs is a small software and design studio run by people who obsess over design and development. We scope honestly, build in short visible steps, test properly and hand over code you fully own. No bloat, no lock-in, no 60-slide proposals.<span className="caret" aria-hidden />
       </p>
-      <dl className="relative mt-20 grid gap-8 border-t-[1.5px] border-ink pt-8 sm:grid-cols-2 lg:grid-cols-4">
+      <dl className="relative mt-20 grid gap-8 border-t-[1.5px] border-ink pt-8 sm:grid-cols-2 lg:grid-cols-3">
         {stats.map((s) => (
           <div key={s.label} className="flex flex-col">
             <dt className="mt-2 max-w-[26ch] text-sm">{s.label}</dt>
